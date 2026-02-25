@@ -1,0 +1,20 @@
+apiVersion: 1
+
+datasources:
+  - name: InfluxDB_v2
+    type: influxdb
+    access: proxy
+
+    # ВАЖНО: grafana и influxdb в одной docker-сети, поэтому host = influxdb
+    url: http://influxdb:8086
+
+    jsonData:
+      version: Flux              # InfluxDB 2 использует Flux
+      organization: pmd-org
+      defaultBucket: robot
+      tlsSkipVerify: true
+
+    secureJsonData:
+      token: super-secret-admin-token
+
+    isDefault: true
