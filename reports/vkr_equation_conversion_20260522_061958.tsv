@@ -1,0 +1,121 @@
+paragraph_index	status	original
+222	dry_run	N_пал = n_сл · n_гр
+223	dry_run	Q_уп = 3600 · N_пал / T_пал
+249	dry_run	T_пал = t_п + Σ_{j=1}^{N_пал}(t_захв,j + t_пер,j + t_укл,j) + Σ_{k=1}^{n_сл-1}t_лист,k + t_отв
+254	dry_run	F_{i,s} = {M_ср, M_max, σ_M, ω_ср, a_max, E}
+255	dry_run	E_{i,s} = Σ |M_i(t) · ω_i(t)| · Δt
+264	dry_run	D_raw → D_clean → F → HI → RUL → A_ТО
+274	dry_run	K_з,i = M_max,i / M_доп,i
+275	dry_run	L_i = Σ |M_i(t)| · Δt
+301	dry_run	HI(t) = 1 - Σ_{j=1}^{p} w_j · f_j(t)
+326	dry_run	HI(t) ≤ HI_кр или x_j(t) ≥ x_кр,j
+328	dry_run	RUL_N = N_кр - N_тек
+352	dry_run	C_Σ = C_ТО + P_отк · C_пр + C_инф
+375	dry_run	S = {D, F, HI, RUL, A_ТО}
+379	dry_run	MAE = (1/n) · Σ_{i=1}^{n}|RUL_i - RUL̂_i|
+380	dry_run	RMSE = √[(1/n) · Σ_{i=1}^{n}(RUL_i - RUL̂_i)^2]
+408	dry_run	d_k = {t_k, c_k, s_k, i, q_i, ω_i, a_i, M_i, event_k}
+417	dry_run	x_norm = (x - x_min) / (x_max - x_min)
+418	dry_run	F_W = {mean(x), max(x), std(x), rms(x), slope(x), E}
+419	dry_run	slope(x) = [x(t_0 + Δt) - x(t_0)] / Δt
+425	dry_run	V = N_s · N_p · f_s · b
+427	dry_run	V_сут = V · T_см · K_зм
+452	dry_run	R = Σ_{j=1}^{m} w_j · r_j
+481	dry_run	RUL̂ = g(F, θ)
+483	dry_run	K_пред = N_своевр / N_пред
+491	dry_run	T_обн ≤ Δt_доп
+492	dry_run	P_потерь ≤ P_доп
+493	dry_run	K_готовн = T_работ / (T_работ + T_прост)
+549	dry_run	K_готовн = T_работ / (T_работ + T_прост)
+550	dry_run	ΔC_пр = C_пр,до - C_пр,после
+551	dry_run	K_пред = N_своевр / N_пред
+595	dry_run	d_k = {t_k, c_k, s_k, i, q_i, ω_i, a_i, M_i, event_k}
+598	dry_run	F_W = {mean(x), max(x), std(x), rms(x), slope(x), E}
+599	dry_run	E = Σ_{k=1}^{m} |M_i(t_k) · ω_i(t_k)| · Δt
+601	dry_run	HI(t) = 1 - Σ_{j=1}^{p} w_j · f_j(t)
+602	dry_run	RUL̂ = g(F_W, HI, θ)
+606	dry_run	P_потерь = N_пот / N_общ ≤ P_доп
+607	dry_run	T_обн ≤ Δt_доп
+686	dry_run	Accept = 1, если K_i = 1 для всех i = 1...n; иначе Accept = 0
+749	dry_run	D_raw -> D_clean -> W -> F_W -> HI -> RUL -> A_ТО
+783	dry_run	N_укл = n_сл · (1 + n_уп)
+784	dry_run	N_укл = 4 · (1 + 3) = 16
+793	dry_run	α_i(N) = α_i,0 + k_i · N
+794	dry_run	M_i,deg(t) = M_i(t) · (1 + α_i(N))
+795	dry_run	T_s,deg = T_s · (1 + β_s · α_i(N))
+802	dry_run	d_k = {t_k, c_k, s_k, i, q_i, ω_i, a_i, M_i, event_k}
+806	dry_run	V_сек = N_p · N_s · f_s · b
+807	dry_run	V_смена = V_сек · T_смена
+809	dry_run	V_сек = 4 · 4 · 25 · 64 = 25600 байт/с
+810	dry_run	V_час = 25600 · 3600 / 1024^2 = 87,9 Мбайт/ч
+816	dry_run	x_norm(t) = (x(t) - x_min) / (x_max - x_min + ε)
+820	dry_run	F_W = {μ_x, σ_x, x_max, x_min, RMS_x, slope_x, E_x}
+821	dry_run	RMS_x = sqrt((1/m) · Σ_{k=1}^{m} x_k^2)
+822	dry_run	slope_x = (x_m - x_1) / (t_m - t_1)
+824	dry_run	E_i(W) = Σ_{k=1}^{m} |M_i(t_k) · ω_i(t_k)| · Δt
+829	dry_run	HI_i(N) = 1 - Σ_{j=1}^{p} w_j · f_{i,j}(N)
+830	dry_run	Σ_{j=1}^{p} w_j = 1
+834	dry_run	HI_i(N) ≤ HI_кр
+835	dry_run	f_{i,j}(N) ≥ f_кр,j
+840	dry_run	RUL_i(N) = N_кр,i - N
+841	dry_run	RUL_i(t) = t_кр,i - t
+845	dry_run	X = {F_W, HI, c, s, i}
+846	dry_run	y = RUL
+872	dry_run	MAE = (1/n) · Σ_{i=1}^{n} |RUL_i - RUL̂_i|
+873	dry_run	RMSE = sqrt((1/n) · Σ_{i=1}^{n} (RUL_i - RUL̂_i)^2)
+875	dry_run	K_пред = N_своевр / N_пред
+900	dry_run	P_пот = N_пот / N_ожид
+901	dry_run	N_ожид = f_s · T_набл · N_p · N_s
+929	dry_run	Warning = 1, если RUL̂ < T_пл + T_рез или HI ≤ HI_кр
+953	dry_run	R_раб = {S_сцена, S_цикл, S_телем, S_признаки, S_RUL, S_БД, S_UI}
+1007	dry_run	N_сл = 4; N_уп,сл = 3; N_лист = 4
+1008	dry_run	N_уп = N_сл · N_уп,сл = 4 · 3 = 12
+1009	dry_run	N_объект = N_лист + N_уп = 4 + 12 = 16
+1011	dry_run	m_пер = max(m_лист, m_уп) = max(1,2; 63) = 63 кг
+1012	dry_run	K_гр = m_пер / m_доп = 63 / 180 = 0,35
+1042	dry_run	M_i,deg(t) = M_i(t) · [1 + α_i(N)] + ε_i(t)
+1043	dry_run	α_i(N) = α_i,0 + k_i · N / N_кр
+1044	dry_run	HI_i(N) = 1 - min(1; α_i(N) / α_i,кр)
+1068	dry_run	D_lim = 1, если HI_i(N) ≤ HI_кр или x_j(N) ≥ x_кр,j
+1072	dry_run	f_s = 1 / T_s = 1 / 0,04 = 25 Гц
+1073	dry_run	a_i(k) = [ω_i(k) - ω_i(k - 1)] / [t_k - t_{k-1}]
+1075	dry_run	d_k = {t_k, N, phase_k, layer_k, item_k, i, q_i, ω_i, a_i, M_i, carrying_k}
+1115	dry_run	W_{N,s} = {d_k | cycle_k = N, phase_k = s, t_k ∈ [t_0, t_0 + Δt]}
+1116	dry_run	M_rms = sqrt((1/n) · Σ_{k=1}^{n} M_i(k)^2)
+1117	dry_run	E_i(W) = Σ_{k=1}^{n} |M_i(k) · ω_i(k)| · Δt
+1118	dry_run	slope(x) = [x(t_0 + Δt) - x(t_0)] / Δt
+1139	dry_run	x_norm = (x - x_min) / (x_max - x_min)
+1145	dry_run	RUL_N(N) = N_кр - N
+1146	dry_run	N_кр = min_i {N | HI_i(N) ≤ HI_кр}
+1147	dry_run	RUL̂ = g(F_W, HI, θ)
+1170	dry_run	MAE = (1/n) · Σ_{j=1}^{n} |RUL_j - RUL̂_j|
+1171	dry_run	RMSE = sqrt((1/n) · Σ_{j=1}^{n} (RUL_j - RUL̂_j)^2)
+1172	dry_run	R² = 1 - Σ(RUL_j - RUL̂_j)^2 / Σ(RUL_j - mean(RUL))^2
+1177	dry_run	key = {robot_id, axis_id, cycle_id, phase, layer, item}
+1178	dry_run	value = {q_i, ω_i, a_i, M_i, HI_i, RUL̂, carrying}
+1201	dry_run	id_k = hash(robot_id, axis_id, cycle_id, phase_k, t_k)
+1227	dry_run	A_ТО = 1, если RUL̂ < T_пл + T_рез или HI_i ≤ HI_кр
+1233	dry_run	D_raw -> D_clean -> F_W -> HI -> RUL̂ -> A_ТО
+1260	dry_run	S_готов = I_сцена · I_цикл · I_телем · I_признаки · I_RUL · I_UI
+1261	dry_run	Accept = 1, если S_готов = 1; иначе Accept = 0
+1263	dry_run	N_созд = N_лист + N_уп + 1 = 4 + 12 + 1 = 17
+1273	dry_run	S_апр = I_сц · I_ц · I_тел · I_пр · I_RUL · I_UI
+1274	dry_run	Accept = 1, если S_апр = 1; иначе Accept = 0
+1295	dry_run	N_пер = N_сл · (1 + N_уп,сл) = 4 · (1 + 3) = 16
+1296	dry_run	N_созд = N_пер + 1 = 17
+1301	dry_run	T_набл = t_max - t_min = 23,6 с
+1302	dry_run	Δt_ср = T_набл / (n - 1) = 23,6 / 472 = 0,05 с
+1303	dry_run	f_набл = 1 / Δt_ср = 20 Гц
+1309	dry_run	RUL_N(N) = N_кр - N
+1310	dry_run	N_кр = min_i {N | HI_i(N) ≤ HI_кр}
+1311	dry_run	MAE = (1/n) · Σ_{j=1}^{n} |RUL_j - RUL̂_j|
+1312	dry_run	RMSE = sqrt((1/n) · Σ_{j=1}^{n} (RUL_j - RUL̂_j)^2)
+1313	dry_run	R² = 1 - Σ(RUL_j - RUL̂_j)^2 / Σ(RUL_j - mean(RUL))^2
+1320	dry_run	A_ТО = 1, если RUL̂ < T_пл + T_рез или HI_i ≤ HI_кр
+1326	dry_run	K_дан = N_корр / N_общ
+1327	dry_run	K_фаз = N_зап,phase / N_общ
+1328	dry_run	K_пред = N_своевр / N_пред
+1333	dry_run	C_пр = t_пр · C_ч + C_рем + C_бр
+1334	dry_run	E_год = N_ав · P_пред · C_пр - C_экспл
+1335	dry_run	T_ок = C_вн / E_год
+1361	dry_run	Q_v = Σ_{j=1}^{m} w_j · r_{v,j}

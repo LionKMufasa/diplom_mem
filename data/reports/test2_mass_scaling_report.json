@@ -1,0 +1,22 @@
+{
+  "model": "/base_respondable",
+  "target_dynamic_respondable_mass_kg": 1650.0,
+  "dynamic_respondable_mass_before_kg": 2628.012268614844,
+  "dynamic_respondable_mass_after_kg": 1649.9999999999995,
+  "uniform_mass_and_inertia_scale": 0.627850188013,
+  "scene_out": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\test2_torque_graphs_mass1650.ttt",
+  "scaled_shapes": [
+    {"alias": "/base_respondable/comp1_respondable", "mass_after_kg": 23.428610},
+    {"alias": "/base_respondable/comp2_respondable", "mass_after_kg": 14.924531},
+    {"alias": "/base_respondable/dop1_respondable", "mass_after_kg": 69.198413},
+    {"alias": "/base_respondable/dop2_respondable", "mass_after_kg": 38.707660},
+    {"alias": "/base_respondable/gripper_respondable", "mass_after_kg": 4.294644},
+    {"alias": "/base_respondable/head_respondable", "mass_after_kg": 866.139312},
+    {"alias": "/base_respondable/help1_respondable", "mass_after_kg": 10.276564},
+    {"alias": "/base_respondable/help2_1_respondable", "mass_after_kg": 43.644304},
+    {"alias": "/base_respondable/help3_1_respondable", "mass_after_kg": 10.790774},
+    {"alias": "/base_respondable/high_arm_respondable", "mass_after_kg": 285.589666},
+    {"alias": "/base_respondable/low_arm_respondable", "mass_after_kg": 226.538759},
+    {"alias": "/base_respondable/pre_gripper_respondable", "mass_after_kg": 56.466763}
+  ]
+}

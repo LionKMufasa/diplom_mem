@@ -1,0 +1,13 @@
+{
+  "figures": [
+    "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\reports\\figures\\vkr_practice\\torque_rms_by_axis.svg",
+    "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\reports\\figures\\vkr_practice\\hi_curves_motor1.svg",
+    "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\reports\\figures\\vkr_practice\\rul_actual_predicted_s3_motor1.svg",
+    "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\reports\\figures\\vkr_practice\\pak_dashboard_summary.svg",
+    "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\reports\\figures\\vkr_practice\\rul_nn_actual_predicted_s3_motor1.svg"
+  ],
+  "source_features": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\features\\vkr_features.csv",
+  "source_estimates": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\results\\vkr_rul_estimates.csv",
+  "source_metrics": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\results\\vkr_rul_metrics.csv",
+  "source_nn_predictions": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\results\\vkr_nn_rul_predictions.csv"
+}

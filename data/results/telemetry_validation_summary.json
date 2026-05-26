@@ -1,0 +1,13 @@
+{
+  "total_rows": 88696,
+  "valid_rows": 88696,
+  "invalid_rows": 0,
+  "K_data": 1.0,
+  "K_phase": 1.0,
+  "axis_count": 4,
+  "run_count": 1,
+  "phase_count": 14,
+  "dt_avg_s": 0.09286294141522321,
+  "sampling_hz": 10.768558315729464,
+  "errors_sample": []
+}

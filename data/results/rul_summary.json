@@ -1,0 +1,8 @@
+{
+  "estimate_rows": 17920,
+  "metric_rows": 16,
+  "fail_alpha": 0.45,
+  "hi_crit": 0.35,
+  "output": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\results\\vkr_rul_estimates.csv",
+  "metrics": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\results\\vkr_rul_metrics.csv"
+}

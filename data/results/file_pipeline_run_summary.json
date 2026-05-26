@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "inputs": [
+    "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\telemetry\\vkr_raw\\long_live_01.jsonl"
+  ],
+  "normalized": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\telemetry\\vkr_normalized\\vkr_telemetry_normalized.csv",
+  "validated": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\telemetry\\vkr_validated\\vkr_telemetry_validated.csv",
+  "features": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\features\\vkr_features.csv",
+  "degradation_features": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\experiments\\vkr_degradation_features.csv",
+  "rul_estimates": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\results\\vkr_rul_estimates.csv",
+  "rul_metrics": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\results\\vkr_rul_metrics.csv",
+  "nn_rul_predictions": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\results\\vkr_nn_rul_predictions.csv",
+  "nn_rul_metrics": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\results\\vkr_nn_rul_metrics.csv",
+  "nn_rul_model": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\results\\vkr_nn_rul_model.json",
+  "figures": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\reports\\figures\\vkr_practice"
+}

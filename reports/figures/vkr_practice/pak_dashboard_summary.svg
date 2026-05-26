@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+<rect width="900" height="420" fill="#f7f8fa"/>
+<text x="40" y="52" font-size="28" font-family="Arial" font-weight="700" fill="#202124">PAK monitoring summary</text>
+<text x="40" y="84" font-size="15" font-family="Arial" fill="#5f6368">Generated from VKR file pipeline artifacts</text>
+<rect x="40" y="120" width="250" height="120" rx="8" fill="white" stroke="#d6d9de"/>
+<text x="62" y="155" font-size="16" font-family="Arial" fill="#5f6368">Current phase</text>
+<text x="62" y="205" font-size="30" font-family="Arial" font-weight="700" fill="#202124">legacy/data</text>
+<rect x="325" y="120" width="250" height="120" rx="8" fill="white" stroke="#d6d9de"/>
+<text x="347" y="155" font-size="16" font-family="Arial" fill="#5f6368">HI/RUL status</text>
+<text x="347" y="205" font-size="30" font-family="Arial" font-weight="700" fill="#d18b00">warning</text>
+<rect x="610" y="120" width="250" height="120" rx="8" fill="white" stroke="#d6d9de"/>
+<text x="632" y="155" font-size="16" font-family="Arial" fill="#5f6368">Recommendation</text>
+<text x="632" y="205" font-size="25" font-family="Arial" font-weight="700" fill="#202124">increase monitoring</text>
+<rect x="40" y="275" width="820" height="90" rx="8" fill="white" stroke="#d6d9de"/>
+<text x="62" y="315" font-size="18" font-family="Arial" fill="#202124">S3 motor1 metrics: MAE=1.76367096, RMSE=2.40580466, R2=0.989145999</text>
+<text x="62" y="345" font-size="15" font-family="Arial" fill="#5f6368">This panel is a static RPZ artifact; live Grafana/InfluxDB can use the same fields.</text>
+</svg>

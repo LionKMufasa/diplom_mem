@@ -1,0 +1,28 @@
+{
+  "run_id": "long_live_01",
+  "scenario": "S0",
+  "default_phase": "legacy_unsegmented",
+  "sources": [
+    {
+      "path": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\telemetry\\vkr_raw\\long_live_01.jsonl",
+      "normalized_rows": 88696
+    }
+  ],
+  "rows": 88696,
+  "fields": [
+    "time",
+    "run_id",
+    "scenario",
+    "cycle",
+    "phase",
+    "layer",
+    "item",
+    "axis",
+    "q",
+    "omega",
+    "accel",
+    "torque",
+    "carrying",
+    "source_file"
+  ]
+}

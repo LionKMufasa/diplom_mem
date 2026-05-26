@@ -1,0 +1,27 @@
+{
+  "input_rows": 88696,
+  "feature_rows": 56,
+  "axes": [
+    "motor1",
+    "motor2",
+    "motor3",
+    "motor4"
+  ],
+  "phases": [
+    "cycle_complete",
+    "grip_contact",
+    "lift_before_pick",
+    "lift_with_load",
+    "move_to_pallet",
+    "pallet_arrived",
+    "pallet_outfeed",
+    "pallet_removed",
+    "pick",
+    "place",
+    "return_home",
+    "return_home_between_layers",
+    "unknown",
+    "water_bundle_generated"
+  ],
+  "output": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\features\\vkr_features.csv"
+}

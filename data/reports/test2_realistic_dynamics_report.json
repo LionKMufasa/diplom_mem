@@ -1,0 +1,236 @@
+{
+  "connected_port": 23001,
+  "model_path": "/base_respondable",
+  "output_scene": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\test2_realistic_dynamics.ttt",
+  "robot_mass_target_kg": 1650.0,
+  "robot_mass_before_kg": 1650.0,
+  "robot_mass_after_kg": 1650.0,
+  "uniform_mass_and_inertia_scale": 1.0,
+  "scaled_shapes": [
+    {
+      "alias": "/base_respondable",
+      "mass_before_kg": 425.9311550783021,
+      "mass_after_kg": 425.9311550783021,
+      "ixx_before": 19.99333447211463,
+      "iyy_before": 36.68434526923434,
+      "izz_before": 54.04040875892593,
+      "ixx_after": 19.99333447211463,
+      "iyy_after": 36.68434526923434,
+      "izz_after": 54.04040875892593
+    },
+    {
+      "alias": "/base_respondable/head_respondable",
+      "mass_before_kg": 642.554028751062,
+      "mass_after_kg": 642.554028751062,
+      "ixx_before": 71.69311000226116,
+      "iyy_before": 64.31414048486205,
+      "izz_before": 58.657699208280874,
+      "ixx_after": 71.69311000226116,
+      "iyy_after": 64.31414048486205,
+      "izz_after": 58.657699208280874
+    },
+    {
+      "alias": "/base_respondable/high_arm_respondable",
+      "mass_before_kg": 211.86752285181467,
+      "mass_after_kg": 211.86752285181467,
+      "ixx_before": 24.07688269491749,
+      "iyy_before": 3.5204123840394574,
+      "izz_before": 24.333505362400853,
+      "ixx_after": 24.07688269491749,
+      "iyy_after": 3.5204123840394574,
+      "izz_after": 24.333505362400853
+    },
+    {
+      "alias": "/base_respondable/help1_respondable",
+      "mass_before_kg": 7.623770654174096,
+      "mass_after_kg": 7.623770654174096,
+      "ixx_before": 1.2116242238996402,
+      "iyy_before": 0.02820070941160785,
+      "izz_before": 1.2387251150943905,
+      "ixx_after": 1.2116242238996402,
+      "iyy_after": 0.02820070941160785,
+      "izz_after": 1.2387251150943905
+    },
+    {
+      "alias": "/base_respondable/dop1_respondable",
+      "mass_before_kg": 51.33552797555139,
+      "mass_after_kg": 51.33552797555139,
+      "ixx_before": 0.9577164115994588,
+      "iyy_before": 1.8961009986771213,
+      "izz_before": 2.1923859710169467,
+      "ixx_after": 0.9577164115994588,
+      "iyy_after": 1.8961009986771213,
+      "izz_after": 2.1923859710169467
+    },
+    {
+      "alias": "/base_respondable/comp1_respondable",
+      "mass_before_kg": 17.38074677531168,
+      "mass_after_kg": 17.38074677531168,
+      "ixx_before": 1.337507108002871,
+      "iyy_before": 0.0885737184040572,
+      "izz_before": 1.4055113292048027,
+      "ixx_after": 1.337507108002871,
+      "iyy_after": 0.0885737184040572,
+      "izz_after": 1.4055113292048027
+    },
+    {
+      "alias": "/base_respondable/low_arm_respondable",
+      "mass_before_kg": 168.06002269309278,
+      "mass_after_kg": 168.06002269309278,
+      "ixx_before": 11.612693545538223,
+      "iyy_before": 28.66287598364852,
+      "izz_before": 38.706904138471046,
+      "ixx_after": 11.612693545538223,
+      "iyy_after": 28.66287598364852,
+      "izz_after": 38.706904138471046
+    },
+    {
+      "alias": "/base_respondable/help2_1_respondable",
+      "mass_before_kg": 32.377959145111156,
+      "mass_after_kg": 32.377959145111156,
+      "ixx_before": 0.3497429056198546,
+      "iyy_before": 1.3244407554143953,
+      "izz_before": 1.4797459950069232,
+      "ixx_after": 0.3497429056198546,
+      "iyy_after": 1.3244407554143953,
+      "izz_after": 1.4797459950069232
+    },
+    {
+      "alias": "/base_respondable/dop2_respondable",
+      "mass_before_kg": 28.715660535325288,
+      "mass_after_kg": 28.715660535325288,
+      "ixx_before": 5.328366409122827,
+      "iyy_before": 0.14622920174447585,
+      "izz_before": 5.458146956509743,
+      "ixx_after": 5.328366409122827,
+      "iyy_after": 0.14622920174447585,
+      "izz_after": 5.458146956509743
+    },
+    {
+      "alias": "/base_respondable/comp2_respondable",
+      "mass_before_kg": 11.071911446433369,
+      "mass_after_kg": 11.071911446433369,
+      "ixx_before": 0.6952089563418566,
+      "iyy_before": 0.1386229282663894,
+      "izz_before": 0.7293410282716976,
+      "ixx_after": 0.6952089563418566,
+      "iyy_after": 0.1386229282663894,
+      "izz_after": 0.7293410282716976
+    },
+    {
+      "alias": "/base_respondable/pre_gripper_respondable",
+      "mass_before_kg": 41.890427489896986,
+      "mass_after_kg": 41.890427489896986,
+      "ixx_before": 0.7486442075572076,
+      "iyy_before": 0.6537145217865974,
+      "izz_before": 0.8803220704977573,
+      "ixx_after": 0.7486442075572076,
+      "iyy_after": 0.6537145217865974,
+      "izz_after": 0.8803220704977573
+    },
+    {
+      "alias": "/base_respondable/help3_1_respondable",
+      "mass_before_kg": 8.005242383261466,
+      "mass_after_kg": 8.005242383261466,
+      "ixx_before": 0.3626748325215991,
+      "iyy_before": 1.0734281814736049,
+      "izz_before": 1.4342354454589632,
+      "ixx_after": 0.3626748325215991,
+      "iyy_after": 1.0734281814736049,
+      "izz_after": 1.4342354454589632
+    },
+    {
+      "alias": "/base_respondable/gripper_respondable",
+      "mass_before_kg": 3.1860242206626115,
+      "mass_after_kg": 3.1860242206626115,
+      "ixx_before": 0.008691647732397967,
+      "iyy_before": 0.016960488843017443,
+      "izz_before": 0.008816138058305091,
+      "ixx_after": 0.008691647732397967,
+      "iyy_after": 0.016960488843017443,
+      "izz_after": 0.008816138058305091
+    }
+  ],
+  "payload": {
+    "handle": 65,
+    "source_path": "/Cuboid",
+    "mass_kg": 120.0,
+    "size_m": [
+      0.1,
+      0.1,
+      0.1
+    ],
+    "density_kg_m3": 119999.99999999997,
+    "inertia": [
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.2
+    ],
+    "used_compute_mass_and_inertia": true
+  },
+  "axis16_compensation": {
+    "target_position_m": -6.1246797521476e-05,
+    "stiffness_n_m": 42000.0,
+    "damping_ns_m": 5500.0,
+    "force_limit_n": 18000.0,
+    "max_vel_m_s": 0.35
+  },
+  "motor_force_caps": {
+    "motor1": {
+      "target_force_before": 15000.0,
+      "target_force_after": 15000.0,
+      "applied_fallback": 0.0
+    },
+    "motor2": {
+      "target_force_before": 18000.0,
+      "target_force_after": 18000.0,
+      "applied_fallback": 0.0
+    },
+    "motor3": {
+      "target_force_before": 18000.0,
+      "target_force_after": 18000.0,
+      "applied_fallback": 0.0
+    }
+  },
+  "joint_dynamics": {
+    "motor1": {
+      "max_vel": 1.2,
+      "max_accel": 2.5,
+      "max_jerk": 10.0
+    },
+    "motor2": {
+      "max_vel": 1.0,
+      "max_accel": 2.2,
+      "max_jerk": 9.0
+    },
+    "motor3": {
+      "max_vel": 1.0,
+      "max_accel": 2.2,
+      "max_jerk": 9.0
+    },
+    "axis16": {
+      "max_vel": 0.35,
+      "max_accel": 1.0,
+      "max_jerk": 4.0
+    }
+  },
+  "root_orientation_world_rad": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "abb_reference": {
+    "product_page": "https://www.abb.com/global/en/areas/robotics/products/robots/articulated-robots/irb-660",
+    "product_spec_pdf": "https://library.e.abb.com/public/0459fa7676cb44a18efaedd87e44d4d1/3HAC023932%20PS%20IRB%20660-en.pdf",
+    "notes": [
+      "ABB lists IRB 660 payload variants up to 250 kg and reach up to 3.15 m.",
+      "ABB product specification lists robot weight 1750 kg; scene was normalized to 1650 kg as requested by the user."
+    ]
+  }
+}

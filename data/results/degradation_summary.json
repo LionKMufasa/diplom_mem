@@ -1,0 +1,12 @@
+{
+  "base_feature_rows": 56,
+  "scenario_rows": 17920,
+  "cycles_per_scenario": 80,
+  "scenarios": {
+    "S0": 0.0,
+    "S1": 0.08,
+    "S2": 0.2,
+    "S3": 0.35
+  },
+  "output": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\experiments\\vkr_degradation_features.csv"
+}

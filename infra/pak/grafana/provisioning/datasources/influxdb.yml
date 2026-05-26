@@ -1,0 +1,16 @@
+apiVersion: 1
+
+datasources:
+  - name: VKR InfluxDB
+    uid: vkr-influxdb
+    type: influxdb
+    access: proxy
+    url: http://influxdb:8086
+    isDefault: true
+    jsonData:
+      version: Flux
+      organization: vkr_org
+      defaultBucket: vkr_pak
+      tlsSkipVerify: true
+    secureJsonData:
+      token: vkr-local-token-2026

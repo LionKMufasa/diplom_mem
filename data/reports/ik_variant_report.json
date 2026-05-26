@@ -1,0 +1,796 @@
+{
+  "scene": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\test1.ttt",
+  "target_world_m": [
+    1.71638,
+    -0.97206,
+    1.1409
+  ],
+  "note": "No sim.setJointInterval calls are made; scene is reloaded between variants.",
+  "variants": [
+    {
+      "name": "local_all_axes_p3_position",
+      "kind": "handleGroup",
+      "pair_mode": "p3_position",
+      "active_policy": "all",
+      "before": {
+        "tip_error_m": 1.1926854250781576,
+        "loop_errors_m": [
+          2.3394736646815477e-06,
+          4.910064289221095e-06,
+          5.913550977318302e-06,
+          9.450413949283692e-06
+        ],
+        "max_loop_error_m": 9.450413949283692e-06,
+        "tip_pos": [
+          1.0663816518143423,
+          0.027940335274244166,
+          1.140898913290402
+        ],
+        "target_pos": [
+          1.7163799999999998,
+          -0.9720600000000001,
+          1.1409
+        ]
+      },
+      "after": {
+        "tip_error_m": 0.012931707003029211,
+        "loop_errors_m": [
+          3.07836636875864e-08,
+          6.4003886879604455e-06,
+          0.04879754400327937,
+          0.040048313137850323
+        ],
+        "max_loop_error_m": 0.04879754400327937,
+        "tip_pos": [
+          1.7110818607338871,
+          -0.9838565573931157,
+          1.1408999999999954
+        ],
+        "target_pos": [
+          1.7163799999999998,
+          -0.9720600000000001,
+          1.1409
+        ]
+      },
+      "last_result": [
+        2,
+        16,
+        [
+          0.048797544003280985,
+          0.0
+        ]
+      ],
+      "joint_info": {
+        "active": [
+          "/base_respondable/motor1",
+          "/base_respondable/motor2",
+          "/base_respondable/axis7",
+          "/base_respondable/axis14",
+          "/base_respondable/axis15",
+          "/base_respondable/axis5",
+          "/base_respondable/axis16",
+          "/base_respondable/axis8",
+          "/base_respondable/motor3",
+          "/base_respondable/axis6",
+          "/base_respondable/axis11",
+          "/base_respondable/axis4",
+          "/base_respondable/axis10",
+          "/base_respondable/axis9",
+          "/base_respondable/axis12"
+        ],
+        "passive": []
+      },
+      "ok_for_target": false,
+      "ok_for_loops": false,
+      "works": false,
+      "error": null,
+      "joint_intervals_unchanged": true
+    },
+    {
+      "name": "local_all_axes_p3_xz",
+      "kind": "handleGroup",
+      "pair_mode": "p3_xz",
+      "active_policy": "all",
+      "before": {
+        "tip_error_m": 1.1926854250781576,
+        "loop_errors_m": [
+          2.3394736646815477e-06,
+          4.910064289221095e-06,
+          5.913550977318302e-06,
+          9.450413949283692e-06
+        ],
+        "max_loop_error_m": 9.450413949283692e-06,
+        "tip_pos": [
+          1.0663816518143423,
+          0.027940335274244166,
+          1.140898913290402
+        ],
+        "target_pos": [
+          1.7163799999999998,
+          -0.9720600000000001,
+          1.1409
+        ]
+      },
+      "after": {
+        "tip_error_m": 0.010143704531505489,
+        "loop_errors_m": [
+          3.0753226451520955e-08,
+          6.397068877700418e-06,
+          0.049279558292961184,
+          0.03952954186443162
+        ],
+        "max_loop_error_m": 0.049279558292961184,
+        "tip_pos": [
+          1.712234858106807,
+          -0.9813181067345211,
+          1.1408999999999938
+        ],
+        "target_pos": [
+          1.7163799999999998,
+          -0.9720600000000001,
+          1.1409
+        ]
+      },
+      "last_result": [
+        2,
+        16,
+        [
+          0.04865388981794941,
+          0.0
+        ]
+      ],
+      "joint_info": {
+        "active": [
+          "/base_respondable/motor1",
+          "/base_respondable/motor2",
+          "/base_respondable/axis7",
+          "/base_respondable/axis14",
+          "/base_respondable/axis15",
+          "/base_respondable/axis5",
+          "/base_respondable/axis16",
+          "/base_respondable/axis8",
+          "/base_respondable/motor3",
+          "/base_respondable/axis6",
+          "/base_respondable/axis11",
+          "/base_respondable/axis4",
+          "/base_respondable/axis10",
+          "/base_respondable/axis9",
+          "/base_respondable/axis12"
+        ],
+        "passive": []
+      },
+      "ok_for_target": false,
+      "ok_for_loops": false,
+      "works": false,
+      "error": null,
+      "joint_intervals_unchanged": true
+    },
+    {
+      "name": "local_all_axes_p3_xy",
+      "kind": "handleGroup",
+      "pair_mode": "p3_xy",
+      "active_policy": "all",
+      "before": {
+        "tip_error_m": 1.1926854250781576,
+        "loop_errors_m": [
+          2.3394736646815477e-06,
+          4.910064289221095e-06,
+          5.913550977318302e-06,
+          9.450413949283692e-06
+        ],
+        "max_loop_error_m": 9.450413949283692e-06,
+        "tip_pos": [
+          1.0663816518143423,
+          0.027940335274244166,
+          1.140898913290402
+        ],
+        "target_pos": [
+          1.7163799999999998,
+          -0.9720600000000001,
+          1.1409
+        ]
+      },
+      "after": {
+        "tip_error_m": 1.3023042874495924e-06,
+        "loop_errors_m": [
+          3.0682856658193885e-08,
+          6.385056913110754e-06,
+          0.08011021351936583,
+          1.7687007414224367e-07
+        ],
+        "max_loop_error_m": 0.08011021351936583,
+        "tip_pos": [
+          1.7163805271485197,
+          -0.972058809155386,
+          1.1409000000000076
+        ],
+        "target_pos": [
+          1.7163799999999998,
+          -0.9720600000000001,
+          1.1409
+        ]
+      },
+      "last_result": [
+        1,
+        0,
+        [
+          3.5285342885661624e-06,
+          0.0
+        ]
+      ],
+      "joint_info": {
+        "active": [
+          "/base_respondable/motor1",
+          "/base_respondable/motor2",
+          "/base_respondable/axis7",
+          "/base_respondable/axis14",
+          "/base_respondable/axis15",
+          "/base_respondable/axis5",
+          "/base_respondable/axis16",
+          "/base_respondable/axis8",
+          "/base_respondable/motor3",
+          "/base_respondable/axis6",
+          "/base_respondable/axis11",
+          "/base_respondable/axis4",
+          "/base_respondable/axis10",
+          "/base_respondable/axis9",
+          "/base_respondable/axis12"
+        ],
+        "passive": []
+      },
+      "ok_for_target": true,
+      "ok_for_loops": false,
+      "works": false,
+      "error": null,
+      "joint_intervals_unchanged": true
+    },
+    {
+      "name": "local_all_pairs_position",
+      "kind": "handleGroup",
+      "pair_mode": "all_position",
+      "active_policy": "all",
+      "before": {
+        "tip_error_m": 1.1926854250781576,
+        "loop_errors_m": [
+          2.3394736646815477e-06,
+          4.910064289221095e-06,
+          5.913550977318302e-06,
+          9.450413949283692e-06
+        ],
+        "max_loop_error_m": 9.450413949283692e-06,
+        "tip_pos": [
+          1.0663816518143423,
+          0.027940335274244166,
+          1.140898913290402
+        ],
+        "target_pos": [
+          1.7163799999999998,
+          -0.9720600000000001,
+          1.1409
+        ]
+      },
+      "after": {
+        "tip_error_m": 0.0007512821985814054,
+        "loop_errors_m": [
+          2.8059901228115663e-08,
+          5.838590881830723e-06,
+          0.05144534251849764,
+          0.03620262078754625
+        ],
+        "max_loop_error_m": 0.05144534251849764,
+        "tip_pos": [
+          1.7166838904152584,
+          -0.9713729224516701,
+          1.140900000000001
+        ],
+        "target_pos": [
+          1.7163799999999998,
+          -0.9720600000000001,
+          1.1409
+        ]
+      },
+      "last_result": [
+        2,
+        16,
+        [
+          0.0514453425184994,
+          0.0
+        ]
+      ],
+      "joint_info": {
+        "active": [
+          "/base_respondable/motor1",
+          "/base_respondable/motor2",
+          "/base_respondable/axis7",
+          "/base_respondable/axis14",
+          "/base_respondable/axis15",
+          "/base_respondable/axis5",
+          "/base_respondable/axis16",
+          "/base_respondable/axis8",
+          "/base_respondable/motor3",
+          "/base_respondable/axis6",
+          "/base_respondable/axis11",
+          "/base_respondable/axis4",
+          "/base_respondable/axis10",
+          "/base_respondable/axis9",
+          "/base_respondable/axis12"
+        ],
+        "passive": []
+      },
+      "ok_for_target": true,
+      "ok_for_loops": false,
+      "works": false,
+      "error": null,
+      "joint_intervals_unchanged": true
+    },
+    {
+      "name": "local_axis16_passive",
+      "kind": "handleGroup",
+      "pair_mode": "p3_position",
+      "active_policy": "axis16_passive",
+      "before": {
+        "tip_error_m": 1.1926854250781576,
+        "loop_errors_m": [
+          2.3394736646815477e-06,
+          4.910064289221095e-06,
+          5.913550977318302e-06,
+          9.450413949283692e-06
+        ],
+        "max_loop_error_m": 9.450413949283692e-06,
+        "tip_pos": [
+          1.0663816518143423,
+          0.027940335274244166,
+          1.140898913290402
+        ],
+        "target_pos": [
+          1.7163799999999998,
+          -0.9720600000000001,
+          1.1409
+        ]
+      },
+      "after": {
+        "tip_error_m": 0.012794396245447273,
+        "loop_errors_m": [
+          0.006002282727515385,
+          6.400225209757249e-06,
+          0.04879879089599474,
+          0.04004752606944765
+        ],
+        "max_loop_error_m": 0.04879879089599474,
+        "tip_pos": [
+          1.7111387847011603,
+          -0.9837315996108815,
+          1.14089999999999
+        ],
+        "target_pos": [
+          1.7163799999999998,
+          -0.9720600000000001,
+          1.1409
+        ]
+      },
+      "last_result": [
+        2,
+        16,
+        [
+          0.04879879089599613,
+          0.0
+        ]
+      ],
+      "joint_info": {
+        "active": [
+          "/base_respondable/motor1",
+          "/base_respondable/motor2",
+          "/base_respondable/axis7",
+          "/base_respondable/axis14",
+          "/base_respondable/axis15",
+          "/base_respondable/axis5",
+          "/base_respondable/axis8",
+          "/base_respondable/motor3",
+          "/base_respondable/axis6",
+          "/base_respondable/axis11",
+          "/base_respondable/axis4",
+          "/base_respondable/axis10",
+          "/base_respondable/axis9",
+          "/base_respondable/axis12"
+        ],
+        "passive": [
+          "/base_respondable/axis16"
+        ]
+      },
+      "ok_for_target": false,
+      "ok_for_loops": false,
+      "works": false,
+      "error": null,
+      "joint_intervals_unchanged": true
+    },
+    {
+      "name": "local_motors_only",
+      "kind": "handleGroup",
+      "pair_mode": "p3_position",
+      "active_policy": "motors_only",
+      "before": {
+        "tip_error_m": 1.1926854250781576,
+        "loop_errors_m": [
+          2.3394736646815477e-06,
+          4.910064289221095e-06,
+          5.913550977318302e-06,
+          9.450413949283692e-06
+        ],
+        "max_loop_error_m": 9.450413949283692e-06,
+        "tip_pos": [
+          1.0663816518143423,
+          0.027940335274244166,
+          1.140898913290402
+        ],
+        "target_pos": [
+          1.7163799999999998,
+          -0.9720600000000001,
+          1.1409
+        ]
+      },
+      "after": {
+        "tip_error_m": 0.8391246156436817,
+        "loop_errors_m": [
+          0.13372574171223595,
+          5.600588316550388e-06,
+          0.1337263764802678,
+          0.16676430186015953
+        ],
+        "max_loop_error_m": 0.16676430186015953,
+        "tip_pos": [
+          0.9731637523428667,
+          -0.6054263480278467,
+          1.0092204836006395
+        ],
+        "target_pos": [
+          1.7163799999999998,
+          -0.9720600000000001,
+          1.1409
+        ]
+      },
+      "last_result": [
+        2,
+        16,
+        [
+          0.8391246156436816,
+          0.0
+        ]
+      ],
+      "joint_info": {
+        "active": [
+          "/base_respondable/motor1",
+          "/base_respondable/motor2",
+          "/base_respondable/motor3"
+        ],
+        "passive": [
+          "/base_respondable/axis7",
+          "/base_respondable/axis14",
+          "/base_respondable/axis15",
+          "/base_respondable/axis5",
+          "/base_respondable/axis16",
+          "/base_respondable/axis8",
+          "/base_respondable/axis6",
+          "/base_respondable/axis11",
+          "/base_respondable/axis4",
+          "/base_respondable/axis10",
+          "/base_respondable/axis9",
+          "/base_respondable/axis12"
+        ]
+      },
+      "ok_for_target": false,
+      "ok_for_loops": false,
+      "works": false,
+      "error": null,
+      "joint_intervals_unchanged": true
+    },
+    {
+      "name": "priority_closure_first",
+      "kind": "handleGroups",
+      "order": "closure_first",
+      "pair_mode": "p3_position",
+      "before": {
+        "tip_error_m": 1.1926854250781576,
+        "loop_errors_m": [
+          2.3394736646815477e-06,
+          4.910064289221095e-06,
+          5.913550977318302e-06,
+          9.450413949283692e-06
+        ],
+        "max_loop_error_m": 9.450413949283692e-06,
+        "tip_pos": [
+          1.0663816518143423,
+          0.027940335274244166,
+          1.140898913290402
+        ],
+        "target_pos": [
+          1.7163799999999998,
+          -0.9720600000000001,
+          1.1409
+        ]
+      },
+      "after": {
+        "tip_error_m": 1.6909246759196137,
+        "loop_errors_m": [
+          2.84728078966956e-06,
+          1.3337360127096964e-05,
+          0.0030602046595167385,
+          0.011166485144306291
+        ],
+        "max_loop_error_m": 0.011166485144306291,
+        "tip_pos": [
+          0.13766906582096247,
+          -1.5777810958332243,
+          1.140899999999942
+        ],
+        "target_pos": [
+          1.7163799999999998,
+          -0.9720600000000001,
+          1.1409
+        ]
+      },
+      "last_result": [
+        2,
+        16,
+        [
+          1.6909246759196142,
+          0.0
+        ]
+      ],
+      "joint_info": {
+        "active": [
+          "/base_respondable/axis15",
+          "/base_respondable/axis14",
+          "/base_respondable/axis7",
+          "/base_respondable/motor2",
+          "/base_respondable/motor1",
+          "/base_respondable/axis8",
+          "/base_respondable/axis16",
+          "/base_respondable/axis5",
+          "/base_respondable/axis11",
+          "/base_respondable/axis6",
+          "/base_respondable/motor3",
+          "/base_respondable/axis9",
+          "/base_respondable/axis10",
+          "/base_respondable/axis4",
+          "/base_respondable/axis12"
+        ],
+        "passive": []
+      },
+      "ok_for_target": false,
+      "ok_for_loops": false,
+      "works": false,
+      "error": null,
+      "joint_intervals_unchanged": true
+    },
+    {
+      "name": "priority_target_first",
+      "kind": "handleGroups",
+      "order": "target_first",
+      "pair_mode": "p3_position",
+      "before": {
+        "tip_error_m": 1.1926854250781576,
+        "loop_errors_m": [
+          2.3394736646815477e-06,
+          4.910064289221095e-06,
+          5.913550977318302e-06,
+          9.450413949283692e-06
+        ],
+        "max_loop_error_m": 9.450413949283692e-06,
+        "tip_pos": [
+          1.0663816518143423,
+          0.027940335274244166,
+          1.140898913290402
+        ],
+        "target_pos": [
+          1.7163799999999998,
+          -0.9720600000000001,
+          1.1409
+        ]
+      },
+      "after": {
+        "tip_error_m": 8.02676975274587e-05,
+        "loop_errors_m": [
+          0.0031161830156325203,
+          0.0032362349503818094,
+          0.03433719909766741,
+          0.06484716392379464
+        ],
+        "max_loop_error_m": 0.06484716392379464,
+        "tip_pos": [
+          1.7163475066375642,
+          -0.972133396761945,
+          1.1408999999999927
+        ],
+        "target_pos": [
+          1.7163799999999998,
+          -0.9720600000000001,
+          1.1409
+        ]
+      },
+      "last_result": [
+        2,
+        16,
+        [
+          0.05948645003950817,
+          0.0
+        ]
+      ],
+      "joint_info": {
+        "active": [
+          "/base_respondable/axis15",
+          "/base_respondable/axis14",
+          "/base_respondable/axis7",
+          "/base_respondable/motor2",
+          "/base_respondable/motor1",
+          "/base_respondable/axis8",
+          "/base_respondable/axis16",
+          "/base_respondable/axis5",
+          "/base_respondable/axis11",
+          "/base_respondable/axis6",
+          "/base_respondable/motor3",
+          "/base_respondable/axis9",
+          "/base_respondable/axis10",
+          "/base_respondable/axis4",
+          "/base_respondable/axis12"
+        ],
+        "passive": []
+      },
+      "ok_for_target": true,
+      "ok_for_loops": false,
+      "works": false,
+      "error": null,
+      "joint_intervals_unchanged": true
+    },
+    {
+      "name": "find_configs_all_axes",
+      "kind": "findConfigs",
+      "pair_mode": "p3_position",
+      "found": 1,
+      "before": {
+        "tip_error_m": 1.1926854250781576,
+        "loop_errors_m": [
+          2.3394736646815477e-06,
+          4.910064289221095e-06,
+          5.913550977318302e-06,
+          9.450413949283692e-06
+        ],
+        "max_loop_error_m": 9.450413949283692e-06,
+        "tip_pos": [
+          1.0663816518143423,
+          0.027940335274244166,
+          1.140898913290402
+        ],
+        "target_pos": [
+          1.7163799999999998,
+          -0.9720600000000001,
+          1.1409
+        ]
+      },
+      "after": {
+        "tip_error_m": 5.834980183962147e-06,
+        "loop_errors_m": [
+          5.086588599489963e-07,
+          7.026004620797055e-06,
+          2.0571171644766793e-05,
+          2.360327051907125e-05
+        ],
+        "max_loop_error_m": 2.360327051907125e-05,
+        "tip_pos": [
+          1.716382361881184,
+          -0.9720546644109025,
+          1.140899999999996
+        ],
+        "target_pos": [
+          1.7163799999999998,
+          -0.9720600000000001,
+          1.1409
+        ]
+      },
+      "joint_info": {
+        "active": [
+          "/base_respondable/motor1",
+          "/base_respondable/motor2",
+          "/base_respondable/axis7",
+          "/base_respondable/axis14",
+          "/base_respondable/axis15",
+          "/base_respondable/axis5",
+          "/base_respondable/axis16",
+          "/base_respondable/axis8",
+          "/base_respondable/motor3",
+          "/base_respondable/axis6",
+          "/base_respondable/axis11",
+          "/base_respondable/axis4",
+          "/base_respondable/axis10",
+          "/base_respondable/axis9",
+          "/base_respondable/axis12"
+        ],
+        "passive": []
+      },
+      "ok_for_target": true,
+      "ok_for_loops": true,
+      "works": true,
+      "error": null,
+      "joint_intervals_unchanged": true
+    },
+    {
+      "name": "proxy_rollback_guard",
+      "kind": "proxy_rollback",
+      "pair_mode": "p3_position",
+      "accepted": 17,
+      "rejected": 583,
+      "before": {
+        "tip_error_m": 1.1926854250781576,
+        "loop_errors_m": [
+          2.3394736646815477e-06,
+          4.910064289221095e-06,
+          5.913550977318302e-06,
+          9.450413949283692e-06
+        ],
+        "max_loop_error_m": 9.450413949283692e-06,
+        "tip_pos": [
+          1.0663816518143423,
+          0.027940335274244166,
+          1.140898913290402
+        ],
+        "target_pos": [
+          1.7163799999999998,
+          -0.9720600000000001,
+          1.1409
+        ]
+      },
+      "after": {
+        "tip_error_m": 1.0227396066427696,
+        "loop_errors_m": [
+          1.1277854589653027e-06,
+          4.781696775368882e-06,
+          0.0018668458329822082,
+          0.0010310529941066633
+        ],
+        "max_loop_error_m": 0.0018668458329822082,
+        "tip_pos": [
+          1.1590341979241086,
+          -0.1145275167066147,
+          1.1408990681850915
+        ],
+        "target_pos": [
+          1.7163799999999998,
+          -0.9720600000000001,
+          1.1409
+        ]
+      },
+      "last_result": [
+        2,
+        16,
+        [
+          0.002017927244473842,
+          0.0
+        ]
+      ],
+      "joint_info": {
+        "active": [
+          "/base_respondable/motor1",
+          "/base_respondable/motor2",
+          "/base_respondable/axis7",
+          "/base_respondable/axis14",
+          "/base_respondable/axis15",
+          "/base_respondable/axis5",
+          "/base_respondable/axis16",
+          "/base_respondable/axis8",
+          "/base_respondable/motor3",
+          "/base_respondable/axis6",
+          "/base_respondable/axis11",
+          "/base_respondable/axis4",
+          "/base_respondable/axis10",
+          "/base_respondable/axis9",
+          "/base_respondable/axis12"
+        ],
+        "passive": []
+      },
+      "ok_for_target": false,
+      "ok_for_loops": true,
+      "works": false,
+      "error": null,
+      "joint_intervals_unchanged": true
+    }
+  ]
+}
