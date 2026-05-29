@@ -65,7 +65,7 @@ Last updated: 2026-05-29
   - Done: created concrete RPZ placeholder cleanup plan in [[docs/vkr_rpz/final_insert_delete_map]].
   - Done: generated DOCX-friendly PNG practical figures in `reports\figures\vkr_practice_png`.
   - Done: deleted/replaced the remaining signed placeholders using the final insert/delete map and practical artifacts.
-  - Done: filled chapter 6 with final numerical results from `long_live_01`, including `22174` raw packets, `88696` normalized rows, `K_data = 1.000`, `K_phase = 1.000`, `56` feature rows, `17920` RUL/NN rows, and NN metrics `MAE = 1.173`, `RMSE = 1.442`, `R2 = 0.994`.
+  - Done: filled chapter 6 with final numerical results from `long_live_01`, including `22174` raw packets, `88696` normalized rows, `K_data = 1.000`, `K_phase = 1.000`, `600` feature rows, `192000` RUL/NN rows, and NN metrics `MAE = 1.441`, `RMSE = 2.144`, `R2 = 0.988`.
   - Done: added NIRS-based calculations: `63 kg` package mass, `187 s` cycle time, `231` packages/hour, `14.55 t/hour`, `58212 t/year`, load factor `0.35`.
   - Done: added a calculation-based economic scenario: annual effect `450000 rub/year`, payback `1.0` year.
   - Done: removed repeated RUL/metric formulas in chapter 6 and now refers to formulas `(88)`-`(93)` instead of restating them.
@@ -257,6 +257,7 @@ Last updated: 2026-05-29
   - The previous VKR PPTX placeholder was `0` bytes and was replaced with the generated deck.
   - Added VKR-specific proof slides for CoppeliaSim model, telemetry/features, PAK architecture, degradation/HI, RUL forecast, approbation metrics, monitoring dashboard, and economic effect.
   - Verification: PPTX ZIP passed, slide count `17`, `artifact-tool` import reports `17` slides, preview PNGs rendered and key slides visually checked.
+  - Done on 2026-05-29: applied final RPZ sync fixes from PDF review: removed `J1-J6`, updated `600`/`192000`, updated `MAE/RMSE/R2`, separated `0.093 s` telemetry step from `5 s` dashboard update, added model-scenario note, economic formula, and safer prototype conclusion.
   - Planning note: [[docs/presentations/vkr_defense_17_slide_plan]].
   - Next polish step: open the PPTX manually in PowerPoint and review exact typography, line breaks, title-page wording, and whether any dense slide should be split while staying within the `20` slide maximum.
 

@@ -268,6 +268,7 @@ Last updated: 2026-05-29
 ## Latest VKR Defense Presentation Pass
 
 - 2026-05-26: built the VKR defense presentation directly from the NIRS-7 deck baseline.
+- 2026-05-29: synchronized presentation content with the final RPZ review values and removed stale `J1-J6`/old metric wording.
 - Final PPTX: `вкр\Презентация ВКР 2026 Миронов Егор Максимович.pptx`.
 - Target slide count confirmed by user: preferred `17` slides; maximum allowed if needed during final polish is `20` slides.
 - Source deck used: `вкр\НИРС(7сем)\Презентация НИРС 2025 Миронов Егор Максимович.pptx`.
@@ -290,6 +291,17 @@ Last updated: 2026-05-29
   - `artifact-tool` can import the final PPTX and reports `17` slides;
   - final preview PNGs were rendered and key slides were visually checked.
 - Known polish note: the deck is usable and evidence-led, but final manual PowerPoint review is still recommended for font fallback, exact line breaks, and preferred title-page wording. If some dense proof slides need splitting, the deck may be expanded up to `20` slides.
+- 2026-05-29 required sync fixes completed:
+  - slide 2 no longer mentions `J1-J6`;
+  - slide 3 says `прототип ПАК`;
+  - slide 6 uses `motor1...motor4` and `63 kg`;
+  - slide 10 architecture was rebuilt as editable cards without `J1-J6`;
+  - slide 11 algorithm was rebuilt as a readable 5-step flow;
+  - slide 12 says `HI снижается`;
+  - slide 13 uses `600` feature rows and `192000` RUL/NN estimates;
+  - slide 14 uses `MAE = 1.441`, `RMSE = 2.144`, `R2 = 0.988` and notes model scenarios `S0-S3`;
+  - slide 15 separates telemetry write step `0.093 s` and dashboard update `5 s`;
+  - slide 16 includes the economic formula and a safer prototype/model-data conclusion.
 
 ## Latest VKR RPZ Practical Insert/Delete Plan
 
@@ -302,9 +314,9 @@ Last updated: 2026-05-29
   - `K_data = 1.000`;
   - `K_phase = 1.000`;
   - phase count: `14`;
-  - feature rows: `56`;
-  - degradation/RUL rows: `17920`;
-  - neural-network average test metrics: `MAE = 1.173`, `RMSE = 1.442`, `R2 = 0.994`.
+  - feature rows: `600`;
+  - degradation/RUL rows: `192000`;
+  - neural-network average test metrics: `MAE = 1.441`, `RMSE = 2.144`, `R2 = 0.988`.
 - Secondary visual/dashboard evidence: `nirs8_grafana_01`, which reached `cycle_complete` and has `K_data = 1.000`, `K_phase = 1.000`, NN metrics `MAE = 2.423`, `RMSE = 2.911`, `R2 = 0.977`.
 - Do not use `final_scene_full_02` as final proof in the RPZ because it did not reach `cycle_complete`; it is only an intermediate/debug run.
 - Core ready-made figure files for insertion are in `reports\figures\vkr_practice`: `torque_rms_by_axis.svg`, `hi_curves_motor1.svg`, `rul_actual_predicted_s3_motor1.svg`, `rul_nn_actual_predicted_s3_motor1.svg`, and `pak_dashboard_summary.svg`.
@@ -333,10 +345,10 @@ Last updated: 2026-05-29
   - methodology and factual-run tables;
   - technological calculations from NIRS data (`63 kg`, `187 s`, `12` packages/cycle, `231` packages/hour, `14.55 t/hour`, `58212 t/year`);
   - torque RMS plot;
-  - actual NN RUL metrics (`MAE = 1.173`, `RMSE = 1.442`, `R2 = 0.994`);
+  - actual NN RUL metrics (`MAE = 1.441`, `RMSE = 2.144`, `R2 = 0.988`);
   - RUL forecast plot;
   - HI curves and dashboard summary;
-  - reliability indicators (`K_data = 1.000`, `K_phase = 1.000`, `K_pred = 1.000`, `T_update = 0.093 s`);
+  - reliability indicators (`K_data = 1.000`, `K_phase = 1.000`, `K_pred = 1.000`, telemetry write step `0.093 s`, dashboard update period `5 s`);
   - economic scenario (`450000 rub/year` effect, `1.0` year payback);
   - maintenance-strategy comparison.
 - Conclusion was filled with a concise summary of the work, practical results, calculations, economic estimate, and future development.

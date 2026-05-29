@@ -30,9 +30,9 @@ Last updated: 2026-05-26
 10. System architecture: CoppeliaSim, telemetry collector, preprocessing, degradation/RUL model, InfluxDB, Grafana.
 11. RUL estimation algorithm: feature matrix, labels, model, MAE/RMSE/R2 metrics.
 12. Degradation model: health indicator, damage accumulation, degradation scenarios S0-S3.
-13. Practical results: final dataset quality and cycle coverage; key values `K_data = 1.000`, `K_phase = 1.000`.
-14. Forecast quality: NN RUL result `MAE = 1.173`, `RMSE = 1.442`, `R2 = 0.994`.
-15. Operator monitoring: Grafana dashboard / PAK summary and update time `T_update = 0.093 s`.
+13. Practical results: final dataset quality and cycle coverage; key values `600` feature rows, `192000` RUL/NN rows, `K_data = 1.000`, `K_phase = 1.000`.
+14. Forecast quality: NN RUL result `MAE = 1.441`, `RMSE = 2.144`, `R2 = 0.988`, with an explicit note that metrics come from model degradation scenarios `S0-S3`.
+15. Operator monitoring: Grafana dashboard / PAK summary, separated as telemetry write step `0.093 s` and dashboard update period `5 s`.
 16. Economic effect and conclusions: `450000 rub/year`, payback about `1.0` year, final VKR results.
 17. Closing slide.
 

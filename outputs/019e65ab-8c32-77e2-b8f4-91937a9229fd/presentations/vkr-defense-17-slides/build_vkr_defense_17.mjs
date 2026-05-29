@@ -223,6 +223,35 @@ function addFlow(ctx, slide, x, y, items) {
   });
 }
 
+function addCompactFlow(ctx, slide, x, y, items) {
+  const cardW = 190;
+  const cardH = 132;
+  const gap = 32;
+  items.forEach((item, index) => {
+    const cx = x + index * (cardW + gap);
+    addCard(ctx, slide, cx, y, cardW, cardH, item.title, item.lines, { accent: item.accent, fontSize: 14 });
+    if (index < items.length - 1) {
+      ctx.addShape(slide, {
+        x: cx + cardW + 8,
+        y: y + 62,
+        width: gap - 14,
+        height: 4,
+        fill: colors.orange,
+        line: { style: "solid", fill: colors.orange, width: 0 },
+      });
+      ctx.addShape(slide, {
+        geometry: "triangle",
+        x: cx + cardW + gap - 14,
+        y: y + 54,
+        width: 16,
+        height: 20,
+        fill: colors.orange,
+        line: { style: "solid", fill: colors.orange, width: 0 },
+      });
+    }
+  });
+}
+
 async function renderPreviews(presentation) {
   await fs.rm(PREVIEW_DIR, { recursive: true, force: true });
   await fs.mkdir(PREVIEW_DIR, { recursive: true });
@@ -268,7 +297,7 @@ async function main() {
 
   setTitle(slides[1], "Актуальность");
   addCard(ctx, slides[1], 92, 286, 250, 155, "Простои", ["останов робота блокирует", "выход готовой продукции"], { accent: colors.orange });
-  addCard(ctx, slides[1], 382, 286, 250, 155, "Регламент", ["не учитывает фактическое", "состояние узлов J1-J6"], { accent: colors.blue });
+  addCard(ctx, slides[1], 382, 286, 250, 155, "Регламент", ["не учитывает фактическое", "состояние приводов", "и механических узлов"], { accent: colors.blue });
   addCard(ctx, slides[1], 672, 286, 250, 155, "Телеметрия", ["момент, скорость, фаза", "цикла доступны из модели"], { accent: colors.green });
   addCard(ctx, slides[1], 962, 286, 250, 155, "PdM", ["прогноз RUL позволяет", "планировать обслуживание"], { accent: colors.orange });
   addBullets(ctx, slides[1], 130, 504, 1040, 96, [
@@ -277,9 +306,10 @@ async function main() {
 
   setTitle(slides[2], "Цель и задачи");
   addCard(ctx, slides[2], 92, 274, 462, 250, "Цель работы", [
-    "Разработать и апробировать ПАК предиктивного обслуживания",
-    "для механических и приводных узлов робота-паллетизатора.",
-  ], { accent: colors.orange, fontSize: 20 });
+    "Разработать и апробировать прототип ПАК",
+    "предиктивного обслуживания узлов робота-паллетизатора",
+    "на базе цифровой модели, телеметрии и прогноза RUL.",
+  ], { accent: colors.orange, fontSize: 18 });
   addCard(ctx, slides[2], 612, 274, 560, 250, "Ключевые задачи", [
     "1. Описать объект и требования к системе.",
     "2. Построить цифровую модель цикла паллетизации.",
@@ -294,18 +324,19 @@ async function main() {
   ], { accent: colors.orange, fontSize: 17 });
 
   setTitle(slides[4], "Участок паллетизации");
-  addCard(ctx, slides[4], 808, 548, 360, 118, "Рабочий цикл", [
+  addCard(ctx, slides[4], 808, 520, 360, 148, "Рабочий цикл", [
     "4 картонных листа",
     "12 упаковок воды за цикл",
     "перемещение загруженного паллета",
-  ], { accent: colors.blue, fontSize: 17 });
+    "повторяемые фазы - основа диагностики",
+  ], { accent: colors.blue, fontSize: 16 });
 
   setTitle(slides[5], "Объект исследования");
-  addCard(ctx, slides[5], 70, 462, 318, 162, "ABB IRB 660-180/3.15", [
-    "6 управляемых осей J1-J6",
+  addCard(ctx, slides[5], 70, 430, 338, 204, "ABB IRB 660-180/3.15", [
     "грузоподъемность 180 кг",
-    "рабочая зона до 3,15 м",
-    "нагруженный цикл паллетизации",
+    "рабочий радиус до 3,15 м",
+    "контролируемые приводы: motor1...motor4",
+    "переносимая упаковка: 63 кг",
   ], { accent: colors.orange, fontSize: 16 });
 
   setTitle(slides[6], "Концепция PdM");
@@ -361,13 +392,41 @@ async function main() {
     alt: "RMS момента по осям",
   });
 
+  deleteTextExceptTitle(slides[9]);
+  deleteImages(slides[9]);
   setTitle(slides[9], "Архитектура разработанного ПАК");
+  addFlow(ctx, slides[9], 72, 286, [
+    { title: "Цифровая модель", lines: ["CoppeliaSim", "motor1...motor4", "фазы цикла"], accent: colors.blue },
+    { title: "Сбор данных", lines: ["Python", "Remote API", "JSONL/CSV"], accent: colors.green },
+    { title: "Признаки", lines: ["валидация", "RMS / energy", "длительность фаз"], accent: colors.orange },
+    { title: "Аналитика", lines: ["HI(motor1...motor4)", "RUL(motor1...motor4)", "MLPRegressor"], accent: colors.blue },
+  ]);
+  addCard(ctx, slides[9], 240, 510, 300, 126, "Хранилище", [
+    "InfluxDB",
+    "события цикла",
+    "прогнозы и метрики",
+  ], { accent: colors.green, fontSize: 16 });
+  addCard(ctx, slides[9], 740, 510, 300, 126, "Интерфейс", [
+    "Grafana",
+    "панели HI/RUL",
+    "предупреждения по ТО",
+  ], { accent: colors.orange, fontSize: 16 });
+  ctx.addShape(slides[9], { x: 542, y: 570, width: 190, height: 4, fill: colors.orange, line: { style: "solid", fill: colors.orange, width: 0 } });
+  ctx.addShape(slides[9], { geometry: "triangle", x: 718, y: 562, width: 18, height: 20, fill: colors.orange, line: { style: "solid", fill: colors.orange, width: 0 } });
 
-  setTitle(slides[10], "Алгоритм оценки RUL");
-  addCard(ctx, slides[10], 62, 512, 314, 108, "Выход модели", [
-    "остаточный ресурс RUL",
-    "алерт при приближении к порогу",
-  ], { accent: colors.orange, fontSize: 15 });
+  deleteTextExceptTitle(slides[10]);
+  deleteImages(slides[10]);
+  replaceWithTopTitle(ctx, slides[10], "Алгоритм оценки RUL");
+  addCompactFlow(ctx, slides[10], 98, 300, [
+    { title: "1. Сбор", lines: ["момент", "скорость", "фаза цикла"], accent: colors.blue },
+    { title: "2. Валидация", lines: ["фильтрация", "проверка полноты", "сегментация"], accent: colors.green },
+    { title: "3. Признаки", lines: ["RMS", "energy", "duration"], accent: colors.orange },
+    { title: "4. HI / RUL", lines: ["контролируемые", "приводы", "motor1...motor4"], accent: colors.blue },
+    { title: "5. ТО", lines: ["порог RUL", "предупреждение", "рекомендация"], accent: colors.green },
+  ]);
+  addBullets(ctx, slides[10], 160, 510, 900, 72, [
+    "Алгоритм превращает фазовую телеметрию в оценку остаточного ресурса и предупреждение для обслуживания.",
+  ], { fontSize: 22, color: colors.white });
 
   deleteTextExceptTitle(slides[11]);
   deleteImages(slides[11]);
@@ -378,7 +437,7 @@ async function main() {
     "S3: ускоренное ухудшение состояния",
   ], { accent: colors.orange, fontSize: 16 });
   addCard(ctx, slides[11], 86, 420, 340, 140, "Health Indicator", [
-    "HI растет с накоплением повреждения",
+    "HI снижается с накоплением повреждения",
     "предельное состояние задает RUL",
   ], { accent: colors.green, fontSize: 16 });
   await ctx.addImage(slides[11], {
@@ -396,8 +455,8 @@ async function main() {
   replaceWithTopTitle(ctx, slides[12], "Результаты апробации ПАК");
   addMetric(ctx, slides[12], 92, 260, 250, 122, "22174", "сырых пакета телеметрии", { accent: colors.blue });
   addMetric(ctx, slides[12], 376, 260, 250, 122, "88696", "нормализованных строк", { accent: colors.blue });
-  addMetric(ctx, slides[12], 660, 260, 250, 122, "56", "строк признаков по фазам", { accent: colors.green });
-  addMetric(ctx, slides[12], 944, 260, 250, 122, "17920", "строк деградации и RUL", { accent: colors.green });
+  addMetric(ctx, slides[12], 660, 260, 250, 122, "600", "строк фазовых признаков", { accent: colors.green });
+  addMetric(ctx, slides[12], 944, 260, 250, 122, "192000", "RUL-оценок и нейросетевых прогнозов", { accent: colors.green, valueSize: 25 });
   addMetric(ctx, slides[12], 234, 432, 250, 122, "K_data = 1.000", "валидность данных", { accent: colors.orange, valueSize: 22 });
   addMetric(ctx, slides[12], 516, 432, 250, 122, "K_phase = 1.000", "покрытие фаз цикла", { accent: colors.orange, valueSize: 22 });
   addMetric(ctx, slides[12], 798, 432, 250, 122, "14 фаз", "выделено в полном цикле", { accent: colors.orange, valueSize: 24 });
@@ -414,9 +473,14 @@ async function main() {
     fit: "contain",
     alt: "Фактический и прогнозный RUL",
   });
-  addMetric(ctx, slides[13], 934, 242, 236, 94, "MAE = 1.173", "средняя абсолютная ошибка, циклы", { accent: colors.blue, valueSize: 24 });
-  addMetric(ctx, slides[13], 934, 360, 236, 94, "RMSE = 1.442", "среднеквадратичная ошибка", { accent: colors.orange, valueSize: 24 });
-  addMetric(ctx, slides[13], 934, 478, 236, 94, "R² = 0.994", "качество аппроксимации", { accent: colors.green, valueSize: 27 });
+  addMetric(ctx, slides[13], 934, 226, 236, 88, "MAE = 1.441", "средняя абсолютная ошибка, циклы", { accent: colors.blue, valueSize: 23 });
+  addMetric(ctx, slides[13], 934, 334, 236, 88, "RMSE = 2.144", "среднеквадратичная ошибка, циклы", { accent: colors.orange, valueSize: 23 });
+  addMetric(ctx, slides[13], 934, 442, 236, 88, "R² = 0.988", "качество аппроксимации", { accent: colors.green, valueSize: 26 });
+  addMetric(ctx, slides[13], 934, 538, 236, 104, "MLPRegressor", "сценарии S0-S3, модельные деградационные данные", { accent: colors.blue, valueSize: 21, labelSize: 14 });
+  addBodyText(ctx, slides[13], "Метрики получены на модельных деградационных сценариях S0-S3.", 160, 650, 760, 34, {
+    fontSize: 16,
+    color: colors.muted,
+  });
 
   deleteTextExceptTitle(slides[14]);
   deleteImages(slides[14]);
@@ -429,7 +493,8 @@ async function main() {
   addCard(ctx, slides[14], 72, 446, 310, 144, "Инфраструктура", [
     "InfluxDB: хранение рядов",
     "Grafana: панели и алерты",
-    "T_update = 0.093 с",
+    "средний шаг записи: 0.093 с",
+    "обновление панели: 5 с",
   ], { accent: colors.orange, fontSize: 16 });
   await ctx.addImage(slides[14], {
     path: ASSETS.dashboard,
@@ -446,11 +511,15 @@ async function main() {
   addMetric(ctx, slides[15], 104, 270, 300, 126, "450000 руб/год", "расчетный эффект от снижения потерь и простоев", { accent: colors.orange, valueSize: 25 });
   addMetric(ctx, slides[15], 490, 270, 300, 126, "1.0 год", "ориентировочный срок окупаемости", { accent: colors.green, valueSize: 30 });
   addMetric(ctx, slides[15], 876, 270, 300, 126, "K_pred = 1.000", "прогноз доступен для проверенных данных", { accent: colors.blue, valueSize: 25 });
-  addBullets(ctx, slides[15], 146, 450, 996, 120, [
+  addCard(ctx, slides[15], 260, 420, 760, 92, "Расчет эффекта", [
+    "3 × (8 − 2) × 30000 − 90000 = 450000 руб./год",
+  ], { accent: colors.orange, fontSize: 18 });
+  addBullets(ctx, slides[15], 146, 530, 996, 120, [
     "Разработан ПАК от цифровой модели до мониторинга оператора.",
     "Получены проверяемые данные, признаки деградации и прогноз RUL.",
-    "Результаты подтверждают практическую применимость PdM для участка паллетизации.",
-  ], { fontSize: 22, color: colors.white });
+    "Результаты подтверждают работоспособность прототипа PdM-контура на модельных данных.",
+    "Для промышленного внедрения требуется калибровка на реальной телеметрии и истории отказов.",
+  ], { fontSize: 19, color: colors.white });
 
   setTitle(slides[16], "Спасибо за внимание!");
   addBodyText(ctx, slides[16], "Разработка программно-аппаратного комплекса предиктивного обслуживания узлов робота-паллетизатора", 165, 382, 930, 70, {

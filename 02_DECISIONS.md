@@ -116,7 +116,7 @@ Last updated: 2026-05-29
 - Decision: use the NIRS-7 presentation as the visual/source baseline, but adapt it to the full VKR story instead of copying it mechanically.
 - Reason: the NIRS-7 deck already contains the relevant defense rhythm and base visuals, while the VKR now has stronger practical evidence from CoppeliaSim, telemetry, HI/RUL, Grafana/InfluxDB, and economic calculations.
 - Practical rule: if the VKR PPTX is missing or zero bytes, treat it as the output artifact and rebuild from the NIRS-7 source deck; do not treat the zero-byte file as a valid template.
-- Current implementation: `вкр\Презентация ВКР 2026 Миронов Егор Максимович.pptx` was generated on 2026-05-26 with 17 slides and verified through PPTX structure checks and `artifact-tool` import.
+- Current implementation: `вкр\Презентация ВКР 2026 Миронов Егор Максимович.pptx` was generated on 2026-05-26 with 17 slides, then synchronized on 2026-05-29 with final RPZ presentation review values and verified through PPTX structure checks and `artifact-tool` import.
 
 ## Use NIRS-7 as Baseline, Not as a Blind Copy
 
