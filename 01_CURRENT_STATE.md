@@ -1,6 +1,6 @@
 # Current State
 
-Last updated: 2026-05-22
+Last updated: 2026-05-29
 
 ## Project Root
 
@@ -12,6 +12,284 @@ Last updated: 2026-05-22
 
 - Current chat focus: VKR/NIRS practical PAK evidence, live Grafana screenshots, and final data pipeline.
 - Main active draft: `ВКР\ВКР 2026 Миронов Егор Максимович.docx`.
+
+## VKR Audit And Correction Decisions - 2026-05-29
+
+- Saved external audit and planned correction note: [[docs/vkr_rpz/audit_findings_2026-05-29]].
+- User accepted most audit-driven strengthening, but clarified the following stable rules:
+  - keep the final scene name `vkr_scena.ttt`; the scene will still be finalized later;
+  - fix the bibliography using the `вкр\литература` folder, including Russian-language literature;
+  - in-text literature references in the VKR RPZ should be without page numbers;
+  - keep the table of contents three-level;
+  - keep `Приложение А` reserved/empty;
+  - do not broadly reframe the work as only a `программно-имитационный прототип`; instead add a clear limitation that degradation scenarios are synthetic/model-based and require calibration on real operating data;
+  - apply the other planned corrections even if the RPZ grows in volume.
+- Active correction priorities:
+  - reconcile bibliography entries against local PDF files, especially Taşcı, Gharib, Liu and Kumar;
+  - remove page fragments from in-text citations;
+  - strengthen the RPZ with FMEA/diagnostic-risk logic, clearer reliability/economics calculations, and synthetic-degradation limitations;
+  - fix internal practical-data weakness: the current `long_live_01` normalized output has `cycle = 1` for all rows and feature aggregation should be refined by inferred cycle/phase segments before final numerical claims are reused.
+
+## Latest VKR Audit Correction Pass - 2026-05-29
+
+- Applied corrections directly to `вкр\ВКР 2026 Миронов Егор Максимович.docx`.
+- Backup before the last correction script run: `вкр\ВКР 2026 Миронов Егор Максимович.backup_before_audit_corrections_20260529_025049.docx`.
+- Script added: `scripts\apply_vkr_audit_corrections_20260529.py`.
+- Bibliography entries corrected against local PDFs in `вкр\литература`:
+  - Taşcı/Omar/Ayvaz -> `Computers & Industrial Engineering`, 2023, article `109566`, DOI `10.1016/j.cie.2023.109566`;
+  - Gharib/Kovács -> `Machines`, 2023, article `695`, DOI `10.3390/machines11070695`;
+  - Liu/Wen/Wang -> `Machine Learning with Applications`, 2025, article `100704`, DOI `10.1016/j.mlwa.2025.100704`;
+  - Kumar et al. -> `Energies`, 2024, article `5538`, DOI `10.3390/en17225538`.
+- In-text citations were normalized to markers without page numbers.
+- DOCX heading levels were restored to a three-level structure: `Heading 1 = 17`, `Heading 2 = 56`, `Heading 3 = 43`.
+- Added limitation text in chapter 6 and conclusion: scenarios `S0...S3` and degradation coefficient are synthetic/model-based and require calibration on real operating, failure and maintenance data before industrial use.
+- Reconciled model selection text: `MLPRegressor` is now the working model for approbation; Random Forest and XGBoost remain comparison/reserve options.
+- Practical pipeline was corrected and rerun on `data\telemetry\vkr_raw\long_live_01.jsonl`:
+  - normalized rows: `88696`;
+  - valid rows: `88696`;
+  - restored cycles: `12`;
+  - phase segments: `1121`;
+  - phases: `14`;
+  - feature rows: `600`;
+  - degradation/RUL rows: `192000`;
+  - train rows: `153600`;
+  - test rows: `38400`;
+  - NN test metrics: `MAE = 1.441`, `RMSE = 2.144`, `R2 = 0.988`.
+- Data-pipeline scripts updated:
+  - `normalize_telemetry.py` now infers cycle/segment numbers when simulator cycle id is constant;
+  - `pipeline_common.py` adds telemetry field `segment`;
+  - `validate_telemetry.py` reports `cycle_count` and `segment_count`;
+  - `build_features.py` reports restored cycle/segment counts;
+  - `train_rul_mlp.py` now splits train/test by synthetic cycles, not random neighboring rows;
+  - `export_to_influx.py` includes `segment` in telemetry/state tags and fields.
+- Regenerated practical outputs in `data\features`, `data\experiments`, `data\results`, `reports\figures\vkr_practice`, and `reports\figures\vkr_practice_png`.
+- Structural checks:
+  - DOCX ZIP integrity passed (`zip_bad=None`);
+  - paragraphs: `827`;
+  - tables: `60`;
+  - corrected source entries are present;
+  - stale old numeric tokens `17920`, `14336`, `3584`, `1,173`, `1,442`, `0,994` were not found in the DOCX text/tables.
+- Visual render QA remains blocked:
+  - sandbox run failed on temp/profile permissions;
+  - escalated run failed because LibreOffice/`soffice` is not installed.
+
+## Latest VKR Pravki PDF Review - 2026-05-29
+
+- Reviewed `вкр\правки.pdf`; saved note: [[docs/vkr_rpz/pravki_pdf_review_2026-05-29]].
+- The review confirms that the previous pass improved the RPZ, but several visible issues remain in the exported PDF:
+  - title-page quotes and extra period in `ООО “Компания “Здоровая жизнь””.`;
+  - abstract phrase `формируется в объеме основную часть...`;
+  - conclusion still says `ГОСТ 34.602–89` instead of the active `ГОСТ 34.602–2020`;
+  - source conflict: [4] / [5] for ГОСТ 34.602-89 / 34.602-2020;
+  - table 14 still uses `Глава 1...Глава 6` as development results;
+  - chapter 6 still has the `2059.05 s` vs `23.6 s` frequency-calculation mismatch;
+  - chapter 5 `25 Hz` vs chapter 6 factual `10.77 Hz` needs explanation;
+  - formula 48 renders as `10242` instead of `1024²`;
+  - conclusion includes a detailed damage/RUL calculation not clearly present in chapter 6.
+- Appendix A being nearly empty is called out as a risk, but this conflicts with the latest user decision to keep Appendix A reserved/empty.
+
+## Latest VKR Pravki Follow-Up Pass - 2026-05-29
+
+- Applied follow-up corrections directly to `вкр\ВКР 2026 Миронов Егор Максимович.docx`.
+- User decisions preserved:
+  - `Рисунок 1` was not edited;
+  - `Приложение А` remains reserved/empty;
+  - contents remains three-level;
+  - the scene name remains `vkr_scena.ttt`.
+- Added script: `scripts\apply_vkr_pravki_followup_20260529.py`.
+- Latest backup from the successful follow-up pass: `вкр\ВКР 2026 Миронов Егор Максимович.backup_before_pravki_followup_20260529_032222.docx`.
+- Corrections applied:
+  - title-page company quotes and extra final period fixed;
+  - abstract wording fixed and the abstract reliability phrase clarified;
+  - all heading paragraphs and heading styles `Heading 1-3` set to `Times New Roman`, `14 pt`;
+  - all table text runs set to `Times New Roman`, `14 pt`;
+  - in-text citations no longer include page fragments such as `[4, с. 6]`;
+  - bibliography order fixed so `ГОСТ 34.602–2020` precedes `ГОСТ 34.602–89`;
+  - table 14 result column now lists engineering deliverables instead of `Глава 1...Глава 6`;
+  - formula 48 fixed from `10242` to `1024²`;
+  - chapter 6 frequency formulas fixed to the full-run calculation: `2059,05 s`, `22173` intervals, `0,0929 s`, `10,77 Hz`;
+  - added explanation that `25 Hz` refers to the CoppeliaSim Lua graph/update target, while `10,77 Hz` is the actual Python Remote API collector average;
+  - moved the `114700` cycle damage/RUL calculation from conclusion into chapter 6 and shortened conclusion;
+  - added limitations for reliability calculation and the economic assumption of `3 events/year`;
+  - clarified MLP/scikit-learn vs XGBoost reserve wording, containerization scope, and object-count wording.
+- Structural check after edits:
+  - DOCX ZIP integrity passed;
+  - bad title quotes: `0`;
+  - bad abstract phrase: `0`;
+  - stale formula tokens `10242`, `23,6 / 472`, old `20 Hz` formula: `0`;
+  - table 14 chapter-result leftovers: `0`;
+  - heading count: `116`, direct non-14-pt heading runs: `0`;
+  - table text runs checked: `2509`, direct non-14-pt table runs: `0`;
+  - tables: `60`, paragraphs: `839`.
+- Visual QA status:
+  - `render_docx.py` failed in sandbox on temp/profile permissions;
+  - escalated render failed because LibreOffice/`soffice` is not installed;
+  - hidden Word COM field/TOC update timed out and the hidden Word process was stopped;
+  - next manual step remains: open the DOCX in Word, update fields/TOC, save a fresh PDF, and visually inspect page breaks/tables.
+
+## Latest VKR Norm-Control Header/Footer/Source Pass - 2026-05-29
+
+- Applied a new norm-control correction pass directly to `вкр\ВКР 2026 Миронов Егор Максимович.docx`.
+- Added script: `scripts\apply_vkr_normcontrol_headers_footers_sources_20260529.py`.
+- Latest backup: `вкр\ВКР 2026 Миронов Егор Максимович.backup_before_normcontrol_headers_footers_sources_20260529_035246.docx`.
+- Corrections applied:
+  - all heading paragraphs, including `Реферат`, `Введение`, chapter headings, `Заключение`, `Список использованных источников`, and appendices, were assigned to `Heading 3`;
+  - all heading styles/runs were forced to `Times New Roman`, `14 pt`, bold;
+  - upper headers in all sections were cleared to a single empty paragraph;
+  - footers were rebuilt to one centered page-number paragraph; the first page footer remains empty through first-page header/footer mode;
+  - source 5 (`ГОСТ 34.602–89`) was removed from the bibliography;
+  - in-text references after the removed source were shifted down by one number, so the new source 5 is `Лаврищева Е.М. ...` and has an in-text citation.
+- Structural check after edits:
+  - DOCX ZIP integrity passed;
+  - heading count: `116`, all in `Heading 3`;
+  - heading runs with size over `18 pt`: `0`;
+  - source count before appendices: `44`;
+  - in-text references now cover `1-44`, including `[5]`;
+  - old `ГОСТ 34.602–89` bibliography entry remains: `0`;
+  - headers OK: `1`, footers OK: `1`, sections: `3`.
+- Visual QA status:
+  - `render_docx.py` was attempted again with escalation, but still failed because LibreOffice/`soffice` is not installed.
+
+## Latest VKR Formula/Table Numbering And Source 35 Pass - 2026-05-29
+
+- Applied the latest checker-driven correction pass directly to `вкр\ВКР 2026 Миронов Егор Максимович.docx`.
+- Added script: `scripts\apply_vkr_numbering_section_source35_20260529.py`.
+- Latest backup from this pass: `вкр\ВКР 2026 Миронов Егор Максимович.backup_before_numbering_section_source35_20260529_053436.docx`.
+- Corrections applied:
+  - formula captions were renumbered continuously after earlier deletions/repeated-formula cleanup;
+  - formula references in chapter 6 and appendix tables were updated to the new numbers;
+  - main-text table captions were renumbered continuously and the known text reference near the TЗ work-composition table now points to table `13`;
+  - subsection `3.6.1` was expanded with two explanatory paragraphs about preliminary, functional, and calculation-analytical tests, so the subsection is no longer too short;
+  - source `[35]` is now cited in chapter 4 in the InfluxDB/time-series storage paragraph.
+- Structural check after edits:
+  - DOCX ZIP integrity passed (`zip_bad=None`);
+  - formulas are continuous: `113` labels, max `(113)`, no missing numbers, no duplicates;
+  - main-text tables are continuous: `44` captions, max `44`, no missing numbers, no duplicates;
+  - in-text source references cover `1-44`, including `[35]`;
+  - no out-of-range table references were found in the main text;
+  - no out-of-range formula references were found in the checked formula-reference text.
+- Visual QA status:
+  - `render_docx.py` was attempted with escalation, but still failed because LibreOffice/`soffice` is not installed.
+  - Manual next step remains: open the DOCX in Word, update fields/TOC, save a fresh PDF, and visually inspect formulas, captions, tables, and page breaks.
+
+## Latest VKR RPZ PDF Review
+
+- 2026-05-28: reviewed the user's saved PDF `вкр\ВКР 2026 Миронов Егор Максимович.pdf`.
+- Saved review note: [[docs/vkr_rpz/pdf_review_2026-05-28]].
+- PDF has `83` pages.
+- No `ВСТАВКА` markers and no `Ошибка! Источник ссылки не найден` were found.
+- Topic alignment is generally good: the RPZ covers the robot-palletizer, CoppeliaSim model, telemetry, HI/RUL, degradation modeling, PAK architecture, monitoring, approbation, reliability and economic estimate.
+- Main issues to fix before final delivery:
+  - empty table captions for tables `22`, `23`, `24`, `25`, `26`, `27`, `28`, `30`, `33`, `34`, `36`, and `44`;
+  - figure-number duplicates: `Рисунок 7`, `Рисунок 8`, and `Рисунок 12`;
+  - stale formula references in chapter 6: PDF text says RUL formulas `(88)-(90)` and metrics `(91)-(93)`, but the PDF shows RUL formulas `(86)-(88)` and MAE/RMSE/R2 `(89)-(91)`;
+  - `Таблица 6` caption/content mismatch;
+  - typo `Цлевое значение` in `Таблица 19`;
+  - outdated future wording such as `Будут вставлены после финальных прогонов` and `Будущая вставка`;
+  - appendix page `83` currently contains only `Приложение`;
+  - file names in the text should be aligned with real project files (`final_scena_diplom.ttt` or `pred_final.ttt`, not `vkr_scena.ttt` unless deliberately renamed).
+
+## Latest VKR RPZ PDF Polish Pass
+
+- 2026-05-28: applied the PDF-review corrections directly to `вкр\ВКР 2026 Миронов Егор Максимович.docx`.
+- User clarified that the final scene will be named `vkr_scena.ttt`; all `.ttt` mentions in the DOCX are now `vkr_scena.ttt` or `scenes/vkr_scena.ttt`.
+- Filled empty table captions for tables `22`, `23`, `24`, `25`, `26`, `27`, `28`, `30`, `33`, `34`, `36`, and `44`.
+- Fixed table `6` caption/content mismatch, table `19` typo, stale formula references in chapter 6, and future-tense artifact wording.
+- Renumbered figure captions sequentially from `Рисунок 1` to `Рисунок 17`; duplicate figure numbers were removed.
+- Added `Приложение А. Дополнительные материалы по программной реализации ПАК` with four appendix tables: software modules, approbation artifacts, normalized telemetry example, and data-processing commands.
+- Updated weighted maintenance-strategy comparison table used by the final integral comparison.
+- Backup before the polish pass: `вкр\ВКР 2026 Миронов Егор Максимович.backup_before_pdf_polish_20260528_012706.docx`.
+- Structural audit after edits:
+  - DOCX ZIP integrity passed;
+  - paragraphs: `735`;
+  - tables: `52`;
+  - table captions: `45`;
+  - empty table captions: `0`;
+  - figure captions: `17`, sequential, no duplicates;
+  - stale tokens: `0`;
+  - appendix present: yes.
+- Visual render QA remains blocked because LibreOffice/`soffice` is not installed; the user should open the DOCX in Word, update fields/TOC if needed, and save a fresh PDF for final visual review.
+
+## Latest VKR RPZ Appendix Pass
+
+- 2026-05-28: added additional appendices to `вкр\ВКР 2026 Миронов Егор Максимович.docx`.
+- Saved note: [[docs/vkr_rpz/appendices_2026-05-28]].
+- Backup before edit: `вкр\ВКР 2026 Миронов Егор Максимович.backup_before_extra_appendices_20260528_015000.docx`.
+- Final appendix structure:
+  - `Приложение А` - software implementation composition;
+  - `Приложение Б` - experimental data and calculated file structure;
+  - `Приложение В` - algorithm fragments for telemetry processing and HI/RUL prediction;
+  - `Приложение Г` - reproduction commands and control artifacts.
+- Added references to appendices in chapters `5.2`, `5.4`, `5.10`, `6.1`, `6.3`, `6.4`, and in the conclusion.
+- Rewrote the outdated chapter `5.4` collector paragraph: it now describes `collect_final_scene_telemetry.py` as an implemented ZeroMQ Remote API JSONL collector using `customData.palletizingCycle` and axes `motor1...motor4`.
+- Structural audit after appendices:
+  - DOCX ZIP integrity passed;
+  - paragraphs: `753`;
+  - tables: `60`;
+  - appendix headings present: `Приложение А`, `Приложение Б`, `Приложение В`, `Приложение Г`;
+  - appendix captions present: `А.1-А.3`, `Б.1-Б.3`, `В.1-В.3`, `Г.1-Г.3`;
+  - stale old scene names / future wording / old telemetry queue wording: `0`.
+- Visual render QA remains blocked because LibreOffice/`soffice` is not installed.
+
+## Latest VKR RPZ Appendix Letter Shift And Code Pass
+
+- 2026-05-28: shifted appendix letters after user correction and added code listings.
+- Saved note: [[docs/vkr_rpz/appendices_2026-05-28]].
+- Final appendix structure in the DOCX:
+  - `Приложение А` - empty reserved appendix page;
+  - `Приложение Б` - software implementation composition;
+  - `Приложение В` - experimental data and calculated file structure;
+  - `Приложение Г` - algorithm fragments for telemetry processing and HI/RUL prediction;
+  - `Приложение Д` - reproduction commands and control artifacts;
+  - `Приложение Ж` - shortened code listings.
+- Code listings added:
+  - `Листинг Ж.1` - cycle state and motor telemetry extraction;
+  - `Листинг Ж.2` - file-processing pipeline sequence;
+  - `Листинг Ж.3` - HI/RUL/risk calculation fragment;
+  - `Листинг Ж.4` - MLPRegressor training fragment.
+- Main-text references were updated:
+  - chapter `5.2` -> appendix `Б`;
+  - chapter `5.4` -> appendices `В`, `Д`, `Ж`;
+  - chapter `5.10` -> appendices `Б-Г`, `Ж`;
+  - chapter `6.1` -> appendices `В`, `Д`;
+  - chapter `6.3` -> appendix `В`;
+  - chapter `6.4` -> appendix `Г`;
+  - conclusion -> appendices `Б-Ж`.
+- Final backup before this correction: `вкр\ВКР 2026 Миронов Егор Максимович.backup_before_appendix_shift_code_20260528_125537.docx`.
+- Structural audit:
+  - DOCX ZIP integrity passed;
+  - paragraphs: `823`;
+  - tables: `60`;
+  - appendix headings present: `Приложение А`, `Приложение Б`, `Приложение В`, `Приложение Г`, `Приложение Д`, `Приложение Ж`;
+  - appendix caption/listing count: `16`;
+  - stale references to appendix `А`, old scene names, and future collector wording: `0`.
+- Visual render QA remains blocked because LibreOffice/`soffice` is not installed.
+
+## Latest VKR Defense Presentation Pass
+
+- 2026-05-26: built the VKR defense presentation directly from the NIRS-7 deck baseline.
+- Final PPTX: `вкр\Презентация ВКР 2026 Миронов Егор Максимович.pptx`.
+- Target slide count confirmed by user: preferred `17` slides; maximum allowed if needed during final polish is `20` slides.
+- Source deck used: `вкр\НИРС(7сем)\Презентация НИРС 2025 Миронов Егор Максимович.pptx`.
+- The previous VKR PPTX placeholder was `0` bytes before this pass and was overwritten with the generated working deck.
+- Added/strengthened VKR-specific slide blocks:
+  - CoppeliaSim digital model;
+  - telemetry and diagnostic features;
+  - PAK architecture;
+  - degradation model and HI curves;
+  - RUL forecast quality;
+  - approbation metrics;
+  - operator monitoring / PAK dashboard;
+  - economic effect and final conclusions.
+- Practical figures inserted from `reports\figures\vkr_practice_png`: `torque_rms_by_axis.png`, `hi_curves_motor1.png`, `rul_nn_actual_predicted_s3_motor1.png`, and `pak_dashboard_summary.png`.
+- Planning note: `docs\presentations\vkr_defense_17_slide_plan.md`.
+- Generated presentation workspace: `outputs\019e65ab-8c32-77e2-b8f4-91937a9229fd\presentations\vkr-defense-17-slides`.
+- Verification completed:
+  - PPTX ZIP container opens;
+  - slide count is `17`;
+  - `artifact-tool` can import the final PPTX and reports `17` slides;
+  - final preview PNGs were rendered and key slides were visually checked.
+- Known polish note: the deck is usable and evidence-led, but final manual PowerPoint review is still recommended for font fallback, exact line breaks, and preferred title-page wording. If some dense proof slides need splitting, the deck may be expanded up to `20` slides.
 
 ## Latest VKR RPZ Practical Insert/Delete Plan
 
@@ -509,3 +787,23 @@ Last updated: 2026-05-22
 - Whether to keep simplified dummy-based attachment or implement a more physical suction/contact joint later.
 - If CoppeliaSim is still loaded from an old top-level scene path, reload/save the canonical scene under `scenes\final_scena_diplom.ttt` before new major edits.
 - Whether to keep the current 32-source bibliography as the final baseline or expand it to 35-40 entries after chapters are filled.
+
+## VKR RPZ Checker Correction - 2026-05-28
+
+- Current working RPZ file remains `вкр\ВКР 2026 Миронов Егор Максимович.docx`.
+- User provided checker issues from `вкр\TestVkr.exe`/rules review:
+  - small or overly fragmented sections/subsections;
+  - missing in-text references for sources `1`, `3`, `5`, `6`, `12`, `14-19`, `21-39`, `42-44`.
+- Applied correction pass with backup:
+  - `вкр\ВКР 2026 Миронов Егор Максимович.backup_before_checker_fixes_20260528_215216.docx`.
+- Removed the listed small third-level headings from the heading structure while preserving their body text under the parent sections:
+  - `1.3.1`, `1.7.2`, `2.1.1`, `2.2.2`, `2.3.2`, `2.6.1`, `4.4.2`, `4.5.2`, `4.7.1`, `4.7.2`, `4.9.1`, `4.9.2`, `4.10.1`, `4.10.2`.
+- Added short source-backed paragraphs in the introduction, chapter 1 and chapter 4 so every requested bibliography item has at least one in-text reference.
+- Expanded the direct introductory text under `1. Предпроектное обследование` so the chapter heading is not followed by only a very short lead before `1.1`.
+- Verification after edit:
+  - DOCX ZIP structure passed (`zip_bad=None`);
+  - all requested source numbers are now cited before the bibliography;
+  - none of the listed small headings remains as a heading paragraph.
+- Visual render QA with `render_docx.py` is still blocked by the environment:
+  - sandbox run failed on temp/profile permissions;
+  - escalated run failed because LibreOffice/`soffice` was not found.

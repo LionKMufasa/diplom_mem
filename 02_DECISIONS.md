@@ -1,6 +1,6 @@
 # Decisions
 
-Last updated: 2026-05-21
+Last updated: 2026-05-29
 
 ## Maintain Markdown External Memory
 
@@ -37,6 +37,33 @@ Last updated: 2026-05-21
 - Decision: implement palletizing in `scenes\final_scena_diplom.ttt`.
 - Reason: this is the currently running scene with the intended conveyors and objects.
 - Avoid applying assumptions from `Diploma.ttt` or earlier `test2` variants unless explicitly revalidated.
+
+## Use `vkr_scena.ttt` As The Final VKR Scene Name
+
+- Decision: in the VKR RPZ and final deliverable wording, the final CoppeliaSim scene is named `vkr_scena.ttt`.
+- Reason: user clarified on 2026-05-28 that this will be the final scene name.
+- Practical rule: replace older RPZ mentions of `final_scena_diplom.ttt` and `pred_final.ttt` with `vkr_scena.ttt`; keep older filenames only as historical project-memory context or backups.
+
+## Use Three-Level VKR Contents And Page-Free Citations
+
+- Decision: VKR RPZ contents should remain three-level after the 2026-05-29 correction, even though an earlier pass temporarily removed small third-level headings from the contents structure.
+- Reason: user explicitly corrected the requirement on 2026-05-29.
+- Practical rule: preserve or restore third-level heading structure where it is useful, but avoid tiny empty sections by adding enough body text or merging only when required by norm control.
+- Decision: VKR in-text literature references should be numeric markers without page numbers, e.g. `[15]`.
+- Reason: user corrected the citation rule on 2026-05-29.
+- Practical rule: remove page fragments such as `, с. 12` from in-text citations; keep references to one source per bracket unless a local sentence genuinely needs otherwise.
+
+## Keep Appendix A Reserved
+
+- Decision: `Приложение А` remains reserved/empty in the VKR RPZ.
+- Reason: user explicitly confirmed this on 2026-05-29 after the appendix-letter shift.
+- Practical rule: do not move substantive appendix content back into `Приложение А`; use later letters for code, data, commands, screenshots, and other supporting material.
+
+## Add Synthetic-Degradation Limitation Without Downgrading The Whole Work
+
+- Decision: do not broadly rename the VKR result as only a `программно-имитационный прототип`.
+- Reason: user wants to keep the current positioning of the work while acknowledging the main methodological limitation.
+- Practical rule: add precise wording that the degradation scenarios and HI/RUL target values are model-based/synthetic and require calibration on real robot maintenance and failure data before industrial use.
 
 ## Use Existing Scene Objects as Templates
 
@@ -82,6 +109,14 @@ Last updated: 2026-05-21
 
 - Decision: postpone `ВКР\Презентация ВКР 2026 Миронов Егор Максимович.pptx` until the RPZ content is stable.
 - Reason: the defense deck should be based on the finalized RPZ story, figures, results, and conclusions.
+
+## Build VKR Defense Deck As 17 Slides From NIRS-7 Baseline
+
+- Decision: the VKR defense presentation preferred target is `17` slides; the maximum allowed count is `20` slides if final polish requires splitting dense evidence.
+- Decision: use the NIRS-7 presentation as the visual/source baseline, but adapt it to the full VKR story instead of copying it mechanically.
+- Reason: the NIRS-7 deck already contains the relevant defense rhythm and base visuals, while the VKR now has stronger practical evidence from CoppeliaSim, telemetry, HI/RUL, Grafana/InfluxDB, and economic calculations.
+- Practical rule: if the VKR PPTX is missing or zero bytes, treat it as the output artifact and rebuild from the NIRS-7 source deck; do not treat the zero-byte file as a valid template.
+- Current implementation: `вкр\Презентация ВКР 2026 Миронов Егор Максимович.pptx` was generated on 2026-05-26 with 17 slides and verified through PPTX structure checks and `artifact-tool` import.
 
 ## Use NIRS-7 as Baseline, Not as a Blind Copy
 
@@ -146,7 +181,7 @@ Last updated: 2026-05-21
 
 - Decision: chapter 4 technical design should reference the actual current scene objects and telemetry path instead of describing a generic robot cell.
 - Reason: the RPZ must support the practical implementation and later defense presentation.
-- Practical rule: use `final_scena_diplom.ttt`, `/base_respondable`, `motor1...motor4`, `/conveyor_bottles`, `/conveyor_pallet`, `/packofbottle_respondable`, `/Cartoon`, `/Pallet_bottles`, and the current Lua cycle phases as the design baseline.
+- Practical rule: use `vkr_scena.ttt`, `/base_respondable`, `motor1...motor4`, `/conveyor_bottles`, `/conveyor_pallet`, `/packofbottle_respondable`, `/Cartoon`, `/Pallet_bottles`, and the current Lua cycle phases as the design baseline. Older names such as `final_scena_diplom.ttt` and `pred_final.ttt` are historical working names only.
 
 ## Build A Working PAK Before Final RPZ Figures
 

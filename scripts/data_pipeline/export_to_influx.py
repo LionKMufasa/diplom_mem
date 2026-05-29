@@ -90,7 +90,7 @@ def aligned_base_ms(rows: list[dict[str, str]]) -> int:
 
 
 def telemetry_lines(rows: list[dict[str, str]], base_ms: int) -> Iterable[str]:
-    seen_state: set[tuple[str, str, str, str, str, str, str]] = set()
+    seen_state: set[tuple[str, str, str, str, str, str, str, str]] = set()
     phase_codes: dict[str, int] = {}
     for row in rows:
         time_s = to_float(row.get("time")) or 0.0
@@ -99,6 +99,7 @@ def telemetry_lines(rows: list[dict[str, str]], base_ms: int) -> Iterable[str]:
             "run_id": row.get("run_id", ""),
             "scenario": row.get("scenario", ""),
             "phase": row.get("phase", ""),
+            "segment": row.get("segment", ""),
             "axis": row.get("axis", ""),
             "layer": row.get("layer", ""),
             "item": row.get("item", ""),
@@ -119,6 +120,7 @@ def telemetry_lines(rows: list[dict[str, str]], base_ms: int) -> Iterable[str]:
             row.get("layer", ""),
             row.get("item", ""),
             row.get("cycle", ""),
+            row.get("segment", ""),
         )
         if state_key in seen_state:
             continue
@@ -130,11 +132,13 @@ def telemetry_lines(rows: list[dict[str, str]], base_ms: int) -> Iterable[str]:
             "run_id": row.get("run_id", ""),
             "scenario": row.get("scenario", ""),
             "phase": phase,
+            "segment": row.get("segment", ""),
             "layer": row.get("layer", ""),
             "item": row.get("item", ""),
         }
         state_fields = {
             "cycle": row.get("cycle", ""),
+            "segment": row.get("segment", ""),
             "carrying": row.get("carrying", ""),
             "phase_code": phase_codes[phase],
         }

@@ -1,0 +1,6 @@
+Intentional deviations from NIRS-7 source:
+- Expanded deck from 15 to 17 slides.
+- Replaced NIRS-7 generic reliability/economic evidence with final VKR numeric evidence.
+- Added practical proof slides for the digital model, telemetry/features, HI degradation curves, RUL forecast, and monitoring dashboard.
+- Improved readability on teal slides with light evidence cards and accent rails.
+- Updated year and group for VKR defense context.

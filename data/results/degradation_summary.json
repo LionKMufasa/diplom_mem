@@ -1,6 +1,6 @@
 {
-  "base_feature_rows": 56,
-  "scenario_rows": 17920,
+  "base_feature_rows": 600,
+  "scenario_rows": 192000,
   "cycles_per_scenario": 80,
   "scenarios": {
     "S0": 0.0,

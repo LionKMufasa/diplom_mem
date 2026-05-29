@@ -135,17 +135,23 @@ def prepare_dataset(rows: list[dict[str, str]], cycles: int, fail_alpha: float) 
 
 def deterministic_split(rows: list[dict[str, str]], test_ratio: float, seed: int) -> np.ndarray:
     rng = np.random.default_rng(seed)
-    keys = [f"{row.get('scenario')}|{row.get('phase')}|{row.get('axis')}" for row in rows]
-    train_mask = np.zeros(len(rows), dtype=bool)
-    grouped: dict[str, list[int]] = defaultdict(list)
-    for index, key in enumerate(keys):
-        grouped[key].append(index)
-    for indices in grouped.values():
-        shuffled = np.array(indices)
+    train_mask = np.ones(len(rows), dtype=bool)
+    cycles_by_scenario: dict[str, set[int]] = defaultdict(set)
+    for row in rows:
+        cycle = int(to_float(row.get("synthetic_cycle"), 1) or 1)
+        cycles_by_scenario[row.get("scenario", "")].add(cycle)
+
+    test_cycles_by_scenario: dict[str, set[int]] = {}
+    for scenario, cycle_values in cycles_by_scenario.items():
+        shuffled = np.array(sorted(cycle_values))
         rng.shuffle(shuffled)
         test_count = max(1, int(round(len(shuffled) * test_ratio))) if len(shuffled) > 1 else 0
-        train_indices = shuffled[test_count:]
-        train_mask[train_indices] = True
+        test_cycles_by_scenario[scenario] = set(int(value) for value in shuffled[:test_count])
+
+    for index, row in enumerate(rows):
+        cycle = int(to_float(row.get("synthetic_cycle"), 1) or 1)
+        if cycle in test_cycles_by_scenario.get(row.get("scenario", ""), set()):
+            train_mask[index] = False
     return train_mask
 
 

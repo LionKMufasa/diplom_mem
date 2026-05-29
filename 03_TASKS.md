@@ -1,10 +1,41 @@
 # Tasks
 
-Last updated: 2026-05-22
+Last updated: 2026-05-29
 
 ## Current Focus: VKR RPZ
 
 - [in_progress] Fill VKR RPZ in `ВКР\ВКР 2026 Миронов Егор Максимович.docx`.
+  - Current correction pass 2026-05-29:
+    - [done] Saved external audit and user clarifications in [[docs/vkr_rpz/audit_findings_2026-05-29]], [[01_CURRENT_STATE]], [[02_DECISIONS]], and `logs/2026-05-29.md`.
+    - [done] Corrected bibliography entries against local PDFs in `вкр\литература`, especially sources for Taşcı, Gharib, Liu and Kumar.
+    - [done] Removed page numbers from in-text citations while keeping source markers.
+    - [done] Restored/kept three-level contents structure in the DOCX by assigning heading levels `1-3`.
+    - [done] Added synthetic-degradation limitation text without downgrading the whole work wording.
+    - [done] Corrected practical-data evidence: inferred `12` cycles and `1121` phase segments, rebuilt `600` feature rows and `192000` RUL/NN rows.
+    - [done] Reconciled model selection text around implemented `MLPRegressor`.
+    - [done] Reran the file pipeline and regenerated practical figures/PNG copies.
+    - [pending] Open the DOCX in Word, update fields/TOC, save a fresh PDF, and visually check page breaks/table layout.
+  - Current correction list from `вкр\правки.pdf` 2026-05-29:
+    - [done] Fixed title-page company quotes and extra period.
+    - [done] Fixed abstract wording and reliability sentence.
+    - [done] Resolved ГОСТ 34.602-2020 / 34.602-89 bibliography order and conclusion wording.
+    - [done] Replaced `Глава 1...Глава 6` in table 14 with engineering deliverables.
+    - [done] Fixed/explained chapter 6 frequency calculations (`2059.05 s` full run, `0.0929 s`, `10.77 Hz`) and `25 Hz` vs `10.77 Hz`.
+    - [done] Fixed formula 48 so it renders as `1024²`, not `10242`.
+    - [done] Moved the damage/RUL calculation from conclusion into chapter 6 and shortened conclusion.
+    - [done] Added reliability and economic-assumption limitation paragraphs.
+    - [done] Preserved empty Appendix A per user decision despite norm-control risk.
+    - [done] Set all headings and table text runs to `Times New Roman`, `14 pt`.
+    - [done] Removed page fragments from in-text citations.
+    - [done] Reassigned all heading paragraphs to `Heading 3`, `14 pt`, bold to satisfy the latest norm-control warning about symbols over `18 pt`.
+    - [done] Rebuilt upper headers to one empty paragraph in each section.
+    - [done] Rebuilt footers to one centered page-number paragraph, with no page number on the title page.
+    - [done] Removed old source 5 (`ГОСТ 34.602–89`), shifted in-text references down, and ensured the new source 5 has a citation.
+    - [done] Renumbered main formula labels continuously to `(1)` ... `(113)` and updated the affected text/table formula references.
+    - [done] Renumbered main-text table captions continuously to `Таблица 1` ... `Таблица 44` and fixed the affected table reference to `таблице 13`.
+    - [done] Expanded subsection `3.6.1` with additional acceptance-test text to remove the small-fragment warning.
+    - [done] Added an in-text citation for source `[35]`; current source references cover `1-44`.
+    - [blocked] Visual render QA remains blocked because LibreOffice/`soffice` is not installed; automated Word COM update timed out.
   - Done: normalized heading structure and Word TOC.
   - Done: added `Перечень принятых сокращений`.
   - Done: inserted clean 32-entry bibliography.
@@ -41,7 +72,21 @@ Last updated: 2026-05-22
   - Done: reran formula numbering after removals; final sequence is `(1)` ... `(114)`.
   - Done: filled the final `Заключение`.
   - Structural check after final insertion pass: DOCX ZIP passed, remaining `ВСТАВКА` markers `0`, tables `48`, formula sequence continuous through `(114)`.
-  - Current step: visually inspect the current DOCX in Word, update fields/TOC manually if needed, and check page count against the 70-page target.
+  - Done: reviewed the user's saved PDF `вкр\ВКР 2026 Миронов Егор Максимович.pdf`; see [[docs/vkr_rpz/pdf_review_2026-05-28]].
+  - Done: applied PDF polish fixes directly to the working DOCX after the saved-PDF review.
+  - Done: filled empty table captions, fixed stale formula references, renumbered duplicate figures, removed future-tense leftovers, fixed abstract page-count wording, and filled the empty appendix.
+  - Done: replaced all `.ttt` scene mentions in the DOCX with the final scene name `vkr_scena.ttt` / `scenes/vkr_scena.ttt`.
+  - Done: added `Приложение А` with four supporting tables: software modules, approbation artifacts, normalized telemetry example, and data-processing commands.
+  - Structural check after PDF polish pass: DOCX ZIP passed, tables `52`, empty table captions `0`, figure captions `17`, duplicate figures `0`, stale tokens `0`, unexpected scene mentions `0`.
+  - Done: expanded appendices to `Приложение А-Г`; see [[docs/vkr_rpz/appendices_2026-05-28]].
+  - Done: added references to appendices in chapters `5.2`, `5.4`, `5.10`, `6.1`, `6.3`, `6.4`, and in the conclusion.
+  - Done: rewrote the outdated chapter `5.4` collector paragraph to describe the implemented ZeroMQ Remote API JSONL collector.
+  - Structural check after appendix expansion: DOCX ZIP passed, tables `60`, appendices `А-Г` present, appendix captions `А.1-А.3`, `Б.1-Б.3`, `В.1-В.3`, `Г.1-Г.3` present, stale old/future tokens `0`.
+  - Done: shifted appendix letters after user correction: `Приложение А` is now empty, previous appendix content moved to `Б`, `В`, `Г`, `Д`, and code listings added in `Приложение Ж`.
+  - Done: updated all main-text appendix references after the shift; no remaining content reference points to empty appendix `А`.
+  - Done: added shortened code listings for telemetry extraction, file-pipeline orchestration, HI/RUL/risk calculation, and MLPRegressor training.
+  - Structural check after appendix shift/code pass: DOCX ZIP passed, paragraphs `823`, tables `60`, appendices `А`, `Б`, `В`, `Г`, `Д`, `Ж` present, appendix caption/listing count `16`, stale appendix/scene/future tokens `0`.
+  - Current step: open the DOCX in Word, update fields/TOC if needed, save a fresh PDF, and visually check page breaks/table layout.
   - See [[docs/vkr_rpz/working_state]].
 
 ## Separate Track: NIRS 8th Semester
@@ -205,9 +250,15 @@ Last updated: 2026-05-22
 - [pending] Confirm motor graphs remain usable after closing and restarting simulation.
   - UI should be recreated on every simulation start.
 
-- [pending] Build VKR defense presentation after RPZ content stabilizes.
-  - Current file `ВКР\Презентация ВКР 2026 Миронов Егор Максимович.pptx` is a zero-byte placeholder.
-  - Base the deck on RPZ chapters, figures, practical results, reliability/economics, and conclusions.
+- [done] Build VKR defense presentation after RPZ content stabilizes.
+  - User confirmed preferred target: `17` slides; maximum allowed if needed: `20` slides.
+  - Source baseline: `вкр\НИРС(7сем)\Презентация НИРС 2025 Миронов Егор Максимович.pptx`.
+  - Final file: `вкр\Презентация ВКР 2026 Миронов Егор Максимович.pptx`.
+  - The previous VKR PPTX placeholder was `0` bytes and was replaced with the generated deck.
+  - Added VKR-specific proof slides for CoppeliaSim model, telemetry/features, PAK architecture, degradation/HI, RUL forecast, approbation metrics, monitoring dashboard, and economic effect.
+  - Verification: PPTX ZIP passed, slide count `17`, `artifact-tool` import reports `17` slides, preview PNGs rendered and key slides visually checked.
+  - Planning note: [[docs/presentations/vkr_defense_17_slide_plan]].
+  - Next polish step: open the PPTX manually in PowerPoint and review exact typography, line breaks, title-page wording, and whether any dense slide should be split while staying within the `20` slide maximum.
 
 ## Done
 
@@ -224,13 +275,16 @@ Last updated: 2026-05-22
 
 ### For VKR RPZ
 
-1. Open `ВКР\ВКР 2026 Миронов Егор Максимович.docx` in Word and visually check chapters 1-6, TOC, bibliography numbering, formulas, captions, figures, and page breaks.
+1. Open `вкр\ВКР 2026 Миронов Егор Максимович.docx` in Word and visually check chapters 1-6, TOC, bibliography numbering, formulas, captions, figures, and page breaks.
 2. Update Word fields/TOC manually because automated Word COM update hung in the current environment.
-3. Check the final main-text page count against the `70` page target and move any oversized detailed material to appendices only if needed.
+3. Re-run the ВКР checker after the 2026-05-28 correction pass:
+   - listed small headings were removed from the heading structure;
+   - requested missing source references `1`, `3`, `5`, `6`, `12`, `14-19`, `21-39`, `42-44` were added.
+4. Check the final main-text page count against the `70` page target and move any oversized detailed material to appendices only if needed.
 
 ### For CoppeliaSim Practice
 
-1. Launch `scenes\pred_final.ttt` in CoppeliaSim.
+1. Launch/save the final CoppeliaSim scene as `scenes\vkr_scena.ttt` (the accepted working scene was previously `scenes\pred_final.ttt`).
 2. Run `scripts\pak\run_pak_demo.ps1 -RunId <run_id>` while simulation is stopped, then press Play after the script says it is waiting for simulation start.
 3. Open Grafana and verify that raw telemetry, HI/RUL, neural-network RUL, error, MAE, and R2 panels fill during the run.
 4. After the run, keep the post-run pipeline/export output as the reproducible evidence layer.
@@ -240,5 +294,5 @@ Last updated: 2026-05-22
 8. Reopen/connect to running CoppeliaSim via ZMQ port `23000`.
 9. Visually verify the new pose-based `sim.moveToPose` movement from [[final_scene_palletizing_cycle]].
 10. Run a longer corrected-scene test/capture toward `cycle_complete` with the fallback IK script installed.
-11. If visual behavior is acceptable, save `scenes\final_scena_diplom.ttt`.
+11. If visual behavior is acceptable, save the scene under the final name `scenes\vkr_scena.ttt`.
 12. Run the full cycle to `cycle_complete`, capture corrected telemetry, re-run the file pipeline, export to InfluxDB/Grafana, and prepare final evidence for RPZ chapters 5-6.

@@ -6,6 +6,8 @@
   "K_phase": 1.0,
   "axis_count": 4,
   "run_count": 1,
+  "cycle_count": 12,
+  "segment_count": 1121,
   "phase_count": 14,
   "dt_avg_s": 0.09286294141522321,
   "sampling_hz": 10.768558315729464,

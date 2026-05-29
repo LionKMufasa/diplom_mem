@@ -1,0 +1,29 @@
+Task mode: template-following from NIRS-7 presentation.
+Source deck: C:/Users/egork/Desktop/coppelia_dpilom/вкр/НИРС(7сем)/Презентация НИРС 2025 Миронов Егор Максимович.pptx
+Source slide count: 15.
+Target slide count: 17.
+
+Reusable patterns:
+- title slide with dark teal geometric background;
+- header/body divider slide with a dark top band and teal content field;
+- left-title/right-image object slide;
+- large evidence image slide;
+- formula/chart result slide;
+- final "thanks" slide.
+
+Typography and palette:
+- preserve the inherited dark teal presentation system;
+- use Aptos/Aptos Display for newly added editable text, matching the modern PowerPoint default style closely;
+- use white/light evidence cards on teal backgrounds for readability;
+- use blue, orange, and green accents to separate data, degradation, and economic results.
+
+Required proof objects:
+- CoppeliaSim/digital model evidence;
+- telemetry/feature evidence;
+- degradation and HI chart;
+- RUL actual-vs-predicted chart;
+- PAK dashboard summary;
+- numeric approbation, metric, and economic results.
+
+Known source issue:
+- The existing VKR PPTX was zero bytes, so it was used as the output path rather than as a source.

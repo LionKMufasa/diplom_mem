@@ -1,5 +1,5 @@
 {
-  "estimate_rows": 17920,
+  "estimate_rows": 192000,
   "metric_rows": 16,
   "fail_alpha": 0.45,
   "hi_crit": 0.35,

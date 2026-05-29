@@ -27,21 +27,24 @@ Read in this order after context compaction or in a new session:
 17. [[docs/vkr_rpz/chapter6_approbation_effectiveness]] - source Markdown used to fill VKR RPZ chapter 6.
 18. [[docs/vkr_rpz/current_written_summary_and_practice_plan]] - concise summary of written RPZ and practical implementation plan.
 19. [[docs/vkr_rpz/final_insert_delete_map]] - concrete map for deleting/replacing RPZ figure/table placeholders after practical PAK work.
-20. [[docs/vkr_practice/pak_pipeline_plan]] - working PAK pipeline, acceptance criteria, and RPZ output package.
-21. [[docs/vkr_practice/coppeliasim_motion_manual_analysis]] - local CoppeliaSim manual/example analysis for the closed-chain robot motion blocker.
-22. [[docs/vkr_practice/data_pipeline_state]] - implemented file data pipeline and latest smoke-test outputs.
-23. [[docs/vkr_practice/pak_runtime_runbook]] - how to run the PAK demo, including another-computer setup.
-24. [[docs/vkr_rpz/literature_citation_notes]] - literature/PDF citation map for VKR RPZ.
-25. [[docs/vkr_rpz/chapter2_conceptual_draft]] - earlier expanded Markdown draft used to fill VKR RPZ chapter 2.
-26. [[docs/nirs8_rpz/nirs8_work_plan]] - NIRS-8 RPZ focus, source document, and next steps.
-27. [[docs/nirs8_rpz/current_docx_state]] - current NIRS-8 DOCX structure and fill status.
-28. [[docs/nirs8_rpz/nirs8_full_draft_source]] - generated source mirror for the filled NIRS-8 DOCX.
-29. [[docs/nirs8_rpz/nirs8_report_outline]] - planned NIRS-8 report structure.
-30. [[docs/nirs8_rpz/nirs8_literature_selection]] - selected literature for NIRS-8 with download status.
+20. [[docs/vkr_rpz/pdf_review_2026-05-28]] - review of the user's saved VKR RPZ PDF, including table-caption fixes and topic-alignment notes.
+21. [[docs/vkr_rpz/appendices_2026-05-28]] - appendix structure added to the VKR RPZ and main-text references to appendices.
+22. [[docs/vkr_rpz/audit_findings_2026-05-29]] - latest audit findings, user decisions, and correction priorities.
+23. [[docs/vkr_practice/pak_pipeline_plan]] - working PAK pipeline, acceptance criteria, and RPZ output package.
+24. [[docs/vkr_practice/coppeliasim_motion_manual_analysis]] - local CoppeliaSim manual/example analysis for the closed-chain robot motion blocker.
+25. [[docs/vkr_practice/data_pipeline_state]] - implemented file data pipeline and latest smoke-test outputs.
+26. [[docs/vkr_practice/pak_runtime_runbook]] - how to run the PAK demo, including another-computer setup.
+27. [[docs/vkr_rpz/literature_citation_notes]] - literature/PDF citation map for VKR RPZ.
+28. [[docs/vkr_rpz/chapter2_conceptual_draft]] - earlier expanded Markdown draft used to fill VKR RPZ chapter 2.
+29. [[docs/nirs8_rpz/nirs8_work_plan]] - NIRS-8 RPZ focus, source document, and next steps.
+30. [[docs/nirs8_rpz/current_docx_state]] - current NIRS-8 DOCX structure and fill status.
+31. [[docs/nirs8_rpz/nirs8_full_draft_source]] - generated source mirror for the filled NIRS-8 DOCX.
+32. [[docs/nirs8_rpz/nirs8_report_outline]] - planned NIRS-8 report structure.
+33. [[docs/nirs8_rpz/nirs8_literature_selection]] - selected literature for NIRS-8 with download status.
 
 Main entities:
 
-- Current scene: `C:\Users\egork\Desktop\coppelia_dpilom\scenes\final_scena_diplom.ttt`
+- Final VKR scene name for RPZ text: `C:\Users\egork\Desktop\coppelia_dpilom\scenes\vkr_scena.ttt`
 - Main cycle script: [[final_scene_palletizing_cycle]]
 - VKR RPZ working document: `C:\Users\egork\Desktop\coppelia_dpilom\ВКР\ВКР 2026 Миронов Егор Максимович.docx`
 - VKR RPZ working note: [[docs/vkr_rpz/working_state]]
@@ -55,6 +58,9 @@ Main entities:
 - VKR RPZ chapter 6 source: [[docs/vkr_rpz/chapter6_approbation_effectiveness]]
 - VKR RPZ summary and practical plan: [[docs/vkr_rpz/current_written_summary_and_practice_plan]]
 - VKR RPZ final insert/delete map: [[docs/vkr_rpz/final_insert_delete_map]]
+- VKR RPZ latest PDF review: [[docs/vkr_rpz/pdf_review_2026-05-28]]
+- VKR RPZ appendices pass: [[docs/vkr_rpz/appendices_2026-05-28]]
+- VKR RPZ latest audit findings: [[docs/vkr_rpz/audit_findings_2026-05-29]]
 - VKR practical PAK pipeline: [[docs/vkr_practice/pak_pipeline_plan]]
 - CoppeliaSim motion manual/example analysis: [[docs/vkr_practice/coppeliasim_motion_manual_analysis]]
 - VKR file data pipeline state: [[docs/vkr_practice/data_pipeline_state]]

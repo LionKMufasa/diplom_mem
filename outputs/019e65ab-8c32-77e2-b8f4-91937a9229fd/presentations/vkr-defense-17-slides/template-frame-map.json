@@ -1,0 +1,22 @@
+{
+  "outputSlides": [
+    { "outputSlide": 1, "sourceSlide": 1, "narrativeRole": "title", "reuseMode": "edit-in-place", "editTargets": ["title", "author", "year"] },
+    { "outputSlide": 2, "sourceSlide": 2, "narrativeRole": "relevance", "reuseMode": "edit-in-place", "editTargets": ["title", "body cards"] },
+    { "outputSlide": 3, "sourceSlide": 3, "narrativeRole": "goal and tasks", "reuseMode": "edit-in-place", "editTargets": ["title", "body cards"] },
+    { "outputSlide": 4, "sourceSlide": 4, "narrativeRole": "production line", "reuseMode": "edit-in-place", "editTargets": ["title", "caption card"] },
+    { "outputSlide": 5, "sourceSlide": 5, "narrativeRole": "palletizing cell", "reuseMode": "edit-in-place", "editTargets": ["title", "caption card"] },
+    { "outputSlide": 6, "sourceSlide": 6, "narrativeRole": "research object", "reuseMode": "edit-in-place", "editTargets": ["title", "specification card"] },
+    { "outputSlide": 7, "sourceSlide": 7, "narrativeRole": "PdM concept", "reuseMode": "edit-in-place", "editTargets": ["title", "flow cards"] },
+    { "outputSlide": 8, "sourceSlide": 7, "narrativeRole": "digital model", "reuseMode": "duplicate-slide", "editTargets": ["title", "cards", "image"] },
+    { "outputSlide": 9, "sourceSlide": 7, "narrativeRole": "telemetry and features", "reuseMode": "duplicate-slide", "editTargets": ["title", "cards", "chart"] },
+    { "outputSlide": 10, "sourceSlide": 8, "narrativeRole": "system architecture", "reuseMode": "edit-in-place", "editTargets": ["title"] },
+    { "outputSlide": 11, "sourceSlide": 9, "narrativeRole": "RUL algorithm", "reuseMode": "edit-in-place", "editTargets": ["title", "summary card"] },
+    { "outputSlide": 12, "sourceSlide": 10, "narrativeRole": "degradation model", "reuseMode": "edit-in-place", "editTargets": ["title", "replace formula images with HI chart"] },
+    { "outputSlide": 13, "sourceSlide": 11, "narrativeRole": "approbation results", "reuseMode": "edit-in-place", "editTargets": ["title", "replace old reliability chart with KPI cards"] },
+    { "outputSlide": 14, "sourceSlide": 12, "narrativeRole": "RUL forecast quality", "reuseMode": "edit-in-place", "editTargets": ["title", "replace formulas with RUL chart and metrics"] },
+    { "outputSlide": 15, "sourceSlide": 13, "narrativeRole": "operator monitoring", "reuseMode": "edit-in-place", "editTargets": ["title", "replace old economic text with dashboard proof"] },
+    { "outputSlide": 16, "sourceSlide": 14, "narrativeRole": "economic effect and conclusions", "reuseMode": "edit-in-place", "editTargets": ["title", "conclusion metrics", "bullets"] },
+    { "outputSlide": 17, "sourceSlide": 15, "narrativeRole": "closing", "reuseMode": "edit-in-place", "editTargets": ["title", "subtitle"] }
+  ],
+  "omittedSourceSlides": []
+}

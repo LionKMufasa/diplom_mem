@@ -15,6 +15,7 @@ TELEMETRY_FIELDS = [
     "run_id",
     "scenario",
     "cycle",
+    "segment",
     "phase",
     "layer",
     "item",

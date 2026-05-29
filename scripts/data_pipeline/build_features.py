@@ -85,6 +85,8 @@ def main() -> None:
     summary = {
         "input_rows": len(rows),
         "feature_rows": len(features),
+        "cycle_count": len({row.get("cycle", "") for row in features if str(row.get("cycle", "")).strip()}),
+        "segment_count": len({row.get("segment", "") for row in rows if str(row.get("segment", "")).strip()}),
         "axes": sorted({row["axis"] for row in features}),
         "phases": sorted({row["phase"] for row in features}),
         "output": str(project_path(args.output)),

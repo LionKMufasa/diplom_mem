@@ -1,6 +1,8 @@
 {
   "input_rows": 88696,
-  "feature_rows": 56,
+  "feature_rows": 600,
+  "cycle_count": 12,
+  "segment_count": 1121,
   "axes": [
     "motor1",
     "motor2",

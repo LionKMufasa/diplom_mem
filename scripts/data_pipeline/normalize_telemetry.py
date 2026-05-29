@@ -53,6 +53,7 @@ def normalize_csv(
                     "run_id": run_id,
                     "scenario": scenario,
                     "cycle": str(cycle),
+                    "segment": "1",
                     "phase": default_phase,
                     "layer": "",
                     "item": "",
@@ -76,47 +77,102 @@ def normalize_jsonl(
     default_phase: str,
 ) -> list[dict[str, str]]:
     output: list[dict[str, str]] = []
+    packets: list[dict] = []
     with input_path.open("r", encoding="utf-8") as stream:
         for line in stream:
             line = line.strip()
             if not line:
                 continue
-            packet = json.loads(line)
-            phase = str(packet.get("phase") or packet.get("cycle_phase") or default_phase)
-            cycle = str(packet.get("cycle") or packet.get("cycle_id") or 1)
-            layer = str(packet.get("layer") or "")
-            item = str(packet.get("item") or "")
-            carrying = str(int(bool(packet.get("carrying") or packet.get("load_attached") or False)))
-            time_s = first_present(packet, "time", "time_s", "timestamp")
-            axis_records = packet.get("axes") or packet.get("motors")
-            if isinstance(axis_records, dict):
-                iterator = axis_records.items()
-            elif isinstance(axis_records, list):
-                iterator = [(record.get("axis") or record.get("name"), record) for record in axis_records if isinstance(record, dict)]
-            else:
-                iterator = []
-            for axis, record in iterator:
-                if not axis or not isinstance(record, dict):
-                    continue
-                output.append(
-                    {
-                        "time": fmt_num(time_s),
-                        "run_id": str(packet.get("run_id") or run_id),
-                        "scenario": str(packet.get("scenario") or scenario),
-                        "cycle": cycle,
-                        "phase": phase,
-                        "layer": layer,
-                        "item": item,
-                        "axis": str(axis),
-                        "q": fmt_num(first_present(record, "q", "position")),
-                        "omega": fmt_num(first_present(record, "omega", "velocity")),
-                        "accel": fmt_num(first_present(record, "accel", "acceleration")),
-                        "torque": fmt_num(first_present(record, "torque", "moment", "force")),
-                        "carrying": carrying,
-                        "source_file": input_path.name,
-                    }
-                )
+            packets.append(json.loads(line))
+
+    source_cycles = [first_present(packet, "cycle", "cycle_id") for packet in packets]
+    source_cycles = [value for value in source_cycles if value not in (None, "")]
+    use_source_cycle = len({str(value) for value in source_cycles}) > 1
+    inferred = infer_cycle_segments(packets, default_phase=default_phase)
+
+    for packet, inferred_cycle, inferred_segment in zip(packets, *inferred):
+        phase = str(packet.get("phase") or packet.get("cycle_phase") or default_phase)
+        cycle = str(first_present(packet, "cycle", "cycle_id") if use_source_cycle else inferred_cycle)
+        segment = str(inferred_segment)
+        layer = str(packet.get("layer") or "")
+        item = str(packet.get("item") or "")
+        carrying = str(int(bool(packet.get("carrying") or packet.get("load_attached") or False)))
+        time_s = first_present(packet, "time", "time_s", "timestamp")
+        axis_records = packet.get("axes") or packet.get("motors")
+        if isinstance(axis_records, dict):
+            iterator = axis_records.items()
+        elif isinstance(axis_records, list):
+            iterator = [(record.get("axis") or record.get("name"), record) for record in axis_records if isinstance(record, dict)]
+        else:
+            iterator = []
+        for axis, record in iterator:
+            if not axis or not isinstance(record, dict):
+                continue
+            output.append(
+                {
+                    "time": fmt_num(time_s),
+                    "run_id": str(packet.get("run_id") or run_id),
+                    "scenario": str(packet.get("scenario") or scenario),
+                    "cycle": cycle,
+                    "segment": segment,
+                    "phase": phase,
+                    "layer": layer,
+                    "item": item,
+                    "axis": str(axis),
+                    "q": fmt_num(first_present(record, "q", "position")),
+                    "omega": fmt_num(first_present(record, "omega", "velocity")),
+                    "accel": fmt_num(first_present(record, "accel", "acceleration")),
+                    "torque": fmt_num(first_present(record, "torque", "moment", "force")),
+                    "carrying": carrying,
+                    "source_file": input_path.name,
+                }
+            )
     return output
+
+
+def infer_cycle_segments(packets: list[dict], *, default_phase: str) -> tuple[list[int], list[int]]:
+    """Recover cycle/phase segment numbers when the simulator exports a constant cycle id."""
+    start_phases = {"pallet_arrived", "lift_before_pick"}
+    end_phases = {"cycle_complete", "pallet_removed"}
+    cycles: list[int] = []
+    segments: list[int] = []
+    cycle = 1
+    segment = 0
+    previous_phase: str | None = None
+    previous_time: float | None = None
+
+    for index, packet in enumerate(packets):
+        phase = str(packet.get("phase") or packet.get("cycle_phase") or default_phase)
+        time_value = first_present(packet, "time", "time_s", "timestamp")
+        time_s = fmt_num(time_value)
+        current_time = float(time_s) if time_s else None
+        phase_changed = previous_phase is not None and phase != previous_phase
+        time_reset = (
+            previous_time is not None
+            and current_time is not None
+            and current_time + 1e-9 < previous_time
+        )
+
+        if index == 0:
+            segment = 1
+        elif phase_changed or time_reset:
+            segment += 1
+
+        if (
+            index > 0
+            and (phase_changed or time_reset)
+            and previous_phase in end_phases
+            and phase in start_phases
+        ):
+            cycle += 1
+
+        cycles.append(cycle)
+        segments.append(segment)
+        previous_phase = phase
+        if current_time is not None:
+            previous_time = current_time
+
+    return cycles, segments
 
 
 def rad_value(value: object) -> float | None:

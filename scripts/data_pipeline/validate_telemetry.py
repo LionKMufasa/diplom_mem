@@ -49,6 +49,8 @@ def validate_rows(rows: list[dict[str, str]]) -> tuple[list[dict[str, str]], dic
         "K_phase": phase_ok / total if total else 0.0,
         "axis_count": len({row.get("axis", "") for row in valid_rows}),
         "run_count": len({row.get("run_id", "") for row in valid_rows}),
+        "cycle_count": len({row.get("cycle", "") for row in valid_rows if str(row.get("cycle", "")).strip()}),
+        "segment_count": len({row.get("segment", "") for row in valid_rows if str(row.get("segment", "")).strip()}),
         "phase_count": len({row.get("phase", "") for row in valid_rows}),
         "dt_avg_s": dt_avg,
         "sampling_hz": 1.0 / dt_avg if dt_avg > 0 else 0.0,

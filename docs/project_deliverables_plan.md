@@ -1,6 +1,6 @@
 # Project Deliverables Plan
 
-Last updated: 2026-05-06
+Last updated: 2026-05-26
 
 ## Source Materials
 
@@ -9,7 +9,7 @@ Last updated: 2026-05-06
 - The 7th-semester NIRS presentation is `ВКР\НИРС(7сем)\Презентация НИРС 2025 Миронов Егор Максимович.pptx`.
 - The 8th-semester NIRS document is `ВКР\НИРС(8сем)\НИРС 2026 Миронов Егор Максимович.docx`.
 - NIRS-8 topic: `Разработка и исследование модели деградации механических узлов промышленного робота для задач предиктивного обслуживания`.
-- The VKR presentation `ВКР\Презентация ВКР 2026 Миронов Егор Максимович.pptx` is currently a zero-byte placeholder.
+- The VKR presentation `вкр\Презентация ВКР 2026 Миронов Егор Максимович.pptx` was built on 2026-05-26 as a 17-slide defense deck based on the NIRS-7 presentation and final VKR practical evidence.
 - The VKR RPZ file `ВКР\ВКР 2026 Миронов Егор Максимович.docx` is currently a short title/service template, not a substantive draft.
 - The scene file `ВКР\final_scena_diplom.ttt` matches `scenes\final_scena_diplom.ttt` by SHA256 hash.
 
