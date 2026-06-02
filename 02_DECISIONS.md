@@ -1,6 +1,6 @@
 # Decisions
 
-Last updated: 2026-05-29
+Last updated: 2026-06-02
 
 ## Maintain Markdown External Memory
 
@@ -58,6 +58,15 @@ Last updated: 2026-05-29
 - Decision: `Приложение А` remains reserved/empty in the VKR RPZ.
 - Reason: user explicitly confirmed this on 2026-05-29 after the appendix-letter shift.
 - Practical rule: do not move substantive appendix content back into `Приложение А`; use later letters for code, data, commands, screenshots, and other supporting material.
+
+## Justify Software Before Architecture In VKR Chapter 2
+
+- Decision: chapter 2 should first justify the selected software/tool stack and only then describe the PAK architecture.
+- Reason: the teacher specifically asked to justify the software choice, and the previous tables 6 and 8 looked too similar because both described components/tools.
+- Practical rule: table 6 explains software choice with alternatives, reasons and limitations; table 7 describes logical architecture levels; table 8 compares architecture variants.
+- Decision: the detailed STEP -> SolidWorks -> URDF -> CoppeliaSim model-preparation story belongs in chapter 5, not chapter 2.
+- Reason: chapter 5 is the working-design chapter and should document practical implementation difficulties and the actual digital-model preparation route.
+- Practical rule: chapter 2 may refer to chapter 5 for details, while chapter 5 should include the CAD/import/tuning route and a placeholder for a SolidWorks screenshot.
 
 ## Add Synthetic-Degradation Limitation Without Downgrading The Whole Work
 

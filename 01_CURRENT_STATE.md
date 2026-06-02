@@ -1,6 +1,6 @@
 # Current State
 
-Last updated: 2026-05-29
+Last updated: 2026-06-02
 
 ## Project Root
 
@@ -171,6 +171,41 @@ Last updated: 2026-05-29
 - Visual QA status:
   - `render_docx.py` was attempted with escalation, but still failed because LibreOffice/`soffice` is not installed.
   - Manual next step remains: open the DOCX in Word, update fields/TOC, save a fresh PDF, and visually inspect formulas, captions, tables, and page breaks.
+
+## Latest VKR Software/Architecture Revision Pass - 2026-06-02
+
+- Saved the accepted correction plan in [[docs/vkr_rpz/software_architecture_revision_2026-06-02]] and linked it from [[00_INDEX]].
+- Applied the correction directly to `вкр\ВКР 2026 Миронов Егор Максимович.docx`.
+- Added script: `scripts\apply_vkr_software_architecture_revision_20260602.py`.
+- Backup before the correction: `вкр\ВКР 2026 Миронов Егор Максимович.backup_before_software_architecture_revision_20260602_031835.docx`.
+- Chapter 2 was reorganized so software choice is justified before architecture:
+  - `2.2. Обоснование выбора программных средств`;
+  - `2.3. Общая архитектура ПАК`;
+  - `2.4. Функциональная модель и потоки данных`;
+  - `2.5. Анализ архитектурного варианта`;
+  - `2.6. Формирование требований к системе`;
+  - `2.7. Выводы по главе`.
+- Tables 6-8 now have distinct roles:
+  - table 6: software/tool choice with alternatives, reasons and limitations;
+  - table 7: logical architecture levels of the PAK;
+  - table 8: comparison of architecture variants.
+- Chapter 5.2 now describes the digital-model preparation route:
+  - STEP model as the starting geometry;
+  - SolidWorks assembly/constraint/joint-axis preparation;
+  - URDF export;
+  - CoppeliaSim import and manual tuning of hierarchy, joints, dummy links, masses, respondable forms and palletizing trajectories.
+- Added an unnumbered placeholder for one future SolidWorks screenshot:
+  - `[Место для вставки скриншота из SolidWorks: сборка робота, сопряжения и подготовка к экспорту в URDF]`.
+  - The placeholder was intentionally left unnumbered because existing figure references include numbers whose captions are not all visible as normal `Рисунок ...` paragraphs.
+- Structural check after edits:
+  - DOCX ZIP integrity passed (`zip_bad=None`);
+  - main-text tables remain continuous: `44` captions, max `44`, no missing numbers, no duplicates;
+  - formulas remain continuous: `113` labels, max `(113)`, no missing numbers, no duplicates;
+  - formula labels changed only around chapter 2 after reordering: old `(22)` and `(23)` became `(17)` and `(18)`, old `(17)`-`(21)` became `(19)`-`(23)`;
+  - no explicit text formula references needed changes for these chapter 2 formulas.
+- Visual QA status:
+  - `render_docx.py` was attempted with escalation, but still failed because LibreOffice/`soffice` is not installed.
+  - Manual next step remains: open the DOCX in Word, update fields/TOC, save a fresh PDF, and visually inspect wide tables 6-8 and the new SolidWorks placeholder.
 
 ## Latest VKR RPZ PDF Review
 

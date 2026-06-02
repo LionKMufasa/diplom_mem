@@ -1,6 +1,6 @@
 # Tasks
 
-Last updated: 2026-05-29
+Last updated: 2026-06-02
 
 ## Current Focus: VKR RPZ
 
@@ -35,6 +35,11 @@ Last updated: 2026-05-29
     - [done] Renumbered main-text table captions continuously to `Таблица 1` ... `Таблица 44` and fixed the affected table reference to `таблице 13`.
     - [done] Expanded subsection `3.6.1` with additional acceptance-test text to remove the small-fragment warning.
     - [done] Added an in-text citation for source `[35]`; current source references cover `1-44`.
+    - [done] Reorganized chapter 2 so software choice is justified before architecture.
+    - [done] Reworked tables 6-8 into distinct roles: software choice, logical architecture levels, and architecture-variant comparison.
+    - [done] Added chapter 5.2 text about STEP -> SolidWorks -> URDF -> CoppeliaSim preparation and tuning of the digital model.
+    - [done] Left an explicit placeholder for one future SolidWorks screenshot.
+    - [done] Rechecked numbering after the 2026-06-02 pass: main tables `1-44`, formulas `(1)`-`(113)`, no table/formula gaps or duplicates.
     - [blocked] Visual render QA remains blocked because LibreOffice/`soffice` is not installed; automated Word COM update timed out.
   - Done: normalized heading structure and Word TOC.
   - Done: added `Перечень принятых сокращений`.
