@@ -1,0 +1,104 @@
+DOCX: C:\Users\egork\Desktop\coppelia_dpilom\вкр\ВКР 2026 Миронов Егор Максимович.docx
+Backup: C:\Users\egork\Desktop\coppelia_dpilom\вкр\ВКР 2026 Миронов Егор Максимович.backup_before_formula_logic_cleanup_20260619_023004.docx
+Formula count after cleanup: 92
+Changes:
+- Removed early MAE/RMSE formulas from chapter 2 and replaced them with a reference to section 4.8.2.
+- Replaced chapter-4 RMSE formula with the square-root RMSE expression.
+- Moved R2 formula to section 4.8.2 and added metric-variable explanations.
+- Added explanations for Kpred, normalization, feature vector and slope in chapter 2.
+- Reworked chapter 3 so the technical assignment references earlier formulas instead of restating them.
+- Removed repeated implementation formulas for slope, normalization, generic RUL and metrics; added references to authoritative definitions.
+- Replaced repeated chapter-6 warning/Kpred formulas with references and added explanations for reliability and comparison formulas.
+Old to new formula numbers:
+1->1
+2->2
+3->3
+4->4
+5->5
+7->6
+8->7
+9->8
+10->9
+11->10
+12->11
+13->12
+14->13
+17->14
+18->15
+19->16
+20->17
+21->18
+22->19
+23->20
+24->21
+25->22
+26->23
+28->24
+35->25
+37->26
+38->27
+39->28
+40->29
+41->30
+42->31
+44->32
+45->33
+46->34
+47->35
+48->36
+49->37
+50->38
+51->39
+52->40
+53->41
+54->42
+55->43
+56->44
+57->45
+58->46
+59->47
+60->48
+61->49
+62->50
+64->52
+65->53
+66->54
+67->55
+68->56
+69->57
+70->58
+71->59
+72->60
+73->61
+74->62
+75->63
+76->64
+77->65
+78->66
+79->67
+80->68
+81->69
+85->70
+86->71
+90->51
+91->72
+92->73
+93->74
+94->75
+95->76
+96->77
+97->78
+98->79
+99->80
+100->81
+101->82
+102->83
+103->84
+104->85
+105->86
+107->87
+108->88
+110->89
+111->90
+112->91
+113->92

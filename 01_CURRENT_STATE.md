@@ -1,6 +1,6 @@
 # Current State
 
-Last updated: 2026-06-02
+Last updated: 2026-06-19
 
 ## Project Root
 
@@ -12,6 +12,155 @@ Last updated: 2026-06-02
 
 - Current chat focus: VKR/NIRS practical PAK evidence, live Grafana screenshots, and final data pipeline.
 - Main active draft: `ВКР\ВКР 2026 Миронов Егор Максимович.docx`.
+
+## VKR Final Consistency Audit - 2026-06-19
+
+- Ran a structural DOCX audit for `вкр\ВКР 2026 Миронов Егор Максимович.docx`.
+- Added audit script/report:
+  - `scripts\audit_vkr_docx_consistency_20260619.py`;
+  - `scratch\vkr_consistency_audit_20260619.json`.
+- Saved note: [[docs/vkr_rpz/final_consistency_audit_2026-06-19]].
+- Clean checks:
+  - formulas are continuous `(1)` ... `(86)`;
+  - main tables are continuous `1-44`;
+  - main figures are continuous `1-19`;
+  - appendix captions are continuous for `Б`, `В`, `Г`, `Д`, and `Ж`;
+  - table text is `12 pt`, large heading runs were not detected;
+  - stale values `17920`, `14336`, `3584`, `1,173`, `1,442`, `0,994`, old `20 Hz`, `23,6 / 472`, `final_scena`, and `pred_final` were not found.
+- Remaining correction items:
+  - fix stale figure references: telemetry paragraph should cite `Рисунок 5`, IDEF0 paragraph should cite `Рисунки 7 и 8`;
+  - fix old formula references in appendix `Таблица Г.2`, especially references to non-existing `(87)` and `(106)`;
+  - visually verify that metric formulas `(49)-(51)` show predicted `RUL` with a hat/accent in Word/PDF;
+  - visually verify formula `(70)` because text extraction shows `mini`, while XML confirms `min` has subscript `i`.
+- Render QA status:
+  - sandbox render failed on LibreOffice temp-profile permissions;
+  - escalated render failed because `soffice` is unavailable;
+  - final visual check must be done manually in Word/PDF.
+
+## Pred-Final VKR PDF Review - 2026-06-19
+
+- Reviewed the pred-final PDF:
+  - `C:\Users\egork\Desktop\Итоговые_файлы_Миронов_2026-06-18_1644\01_Документы_для_сдачи\ВКР_нормоконтроль\Миронов Е.М. РК9-83Б - ВКР.pdf`.
+- Saved detailed review note: [[docs/vkr_rpz/final_pdf_review_2026-06-19]].
+- Machine-readable artifacts were saved under `scratch\final_vkr_pdf_analysis_20260619`.
+- Positive checks:
+  - PDF pages: `124`;
+  - main numeric tables are continuous: `1-44`, no gaps/duplicates in extracted captions;
+  - figures are continuous: `1-19`, no gaps/duplicates in extracted captions;
+  - sources `1-44` are all cited;
+  - no old scene names such as `final_scena` / `pred_final` were found;
+  - no broken-reference text was found.
+- Main issue:
+  - many formulas are repeated under new numbers instead of being referenced from their first definition.
+  - repeated formulas include `Kпред`, observation vector `d_k`, normalization `x_norm`, feature vector `F_W`, `slope`, update-period condition, availability coefficient, energy feature, `RUL_hat`, maintenance decision rule, MAE, and weighted diagnostic/risk sum.
+- Recommended next correction:
+  - keep base definitions once;
+  - replace repeated formulas in chapters 3, 5, and 6 with references to the first formula number;
+  - after edits, renumber formulas and update text/appx references.
+- Additional structure note:
+  - contents still has `4.2. Создание цифровой модели РТК`; to match the accepted plan, chapter 4 should use design wording, while the STEP -> SolidWorks -> URDF -> CoppeliaSim implementation story should remain in chapter 5.2.
+
+## VKR Formula Logic Cleanup - 2026-06-19
+
+- Applied formula cleanup directly to `вкр\ВКР 2026 Миронов Егор Максимович.docx`.
+- Saved note: [[docs/vkr_rpz/formula_logic_cleanup_2026-06-19]].
+- Script added/used: `scripts\apply_vkr_formula_logic_cleanup_20260619.py`.
+- Backup before the final successful pass:
+  - `вкр\ВКР 2026 Миронов Егор Максимович.backup_before_formula_logic_cleanup_20260619_023004.docx`.
+- Result:
+  - formulas reduced to `92`;
+  - formula numbering continuous: `(1)` ... `(92)`;
+  - duplicate formula labels: `0`;
+  - missing formula labels: `0`;
+  - repeated formula bodies after normalization: `0`;
+  - source references still cover `1-44`;
+  - old scene names and broken Word reference text were not found.
+- Main logic changes:
+  - chapter 2 now mentions MAE/RMSE/R² conceptually and points to section `4.8.2`;
+  - section `4.8.2` is the authoritative place for metric formulas: MAE `(49)`, RMSE `(50)`, R² `(51)`;
+  - chapter 3 now references earlier definitions instead of restating `d_k`, `F_W`, HI, RUL, and update-period formulas;
+  - chapter 5 references slope, normalization, generic RUL and metrics instead of repeating formulas;
+  - chapter 6 references warning rule `(75)`, RUL formulas `(70)-(71)`, metrics `(49)-(51)`, and timely-warning coefficient `(15)`.
+- Added missing variable explanations for `Kпред`, normalization/feature/slope notation, metrics, `Pпотерь`, `Kдан`, `Kфаз`, and `Qv`.
+- Visual render status:
+  - sandbox render failed on temporary-profile permissions;
+  - escalated render failed because `soffice` / LibreOffice is unavailable.
+
+## VKR Formula Explanation Subscripts - 2026-06-19
+
+- Applied a local cleanup of formula-explanation notation directly to `вкр\ВКР 2026 Миронов Егор Максимович.docx`.
+- Saved note: [[docs/vkr_rpz/formula_explanation_subscripts_2026-06-19]].
+- Script added/used: `scripts\fix_vkr_formula_explanation_subscripts_20260619.py`.
+- Backup:
+  - `вкр\ВКР 2026 Миронов Егор Максимович.backup_before_formula_explanation_subscripts_20260619_030407.docx`.
+- Result:
+  - explanatory variables such as `F_i,s`, `d_k`, `x_min`, `F_W`, `RUL_i`, `D_lim`, `I_RUL` were converted from underscore notation to real Word subscript formatting;
+  - scope was limited to explanatory paragraphs starting with `где ...`, so code identifiers, filenames, scene paths and CSV field names were not globally altered;
+  - compact indices in the same explanation paragraphs, such as `HIкр`, `Nкр`, `AТО`, `Kдан`, `Sапр`, were also normalized to subscript formatting.
+- Structural checks:
+  - changed paragraphs: `26`;
+  - subscript conversions: `119`;
+  - remaining mathematical underscore tokens in ordinary paragraphs: `0`;
+  - remaining underscores in `где ...` explanation paragraphs: `0`;
+  - real Word/XML subscript runs in explanation paragraphs: `159`;
+  - formula labels remain continuous `(1)` ... `(92)`, no missing labels or duplicates;
+  - table text remains `12 pt`: checked `1495` table runs, non-12-pt runs `0`;
+  - broken Word reference text and `???` encoding artifacts were not found.
+- Visual render status:
+  - sandbox render failed on temporary-profile permissions;
+  - escalated render failed because `soffice` / LibreOffice is unavailable.
+
+## VKR Chapter 6 Formula Notation And Renumbering - 2026-06-19
+
+- Applied the chapter 6.2+ formula/notation correction directly to `вкр\ВКР 2026 Миронов Егор Максимович.docx`.
+- Saved note: [[docs/vkr_rpz/chapter6_formula_notation_renumber_2026-06-19]].
+- Scripts added/used:
+  - `scripts\fix_vkr_chapter6_formulas_notation_20260619.py`;
+  - `scripts\renumber_vkr_formulas_after_chapter6_cleanup_20260619.py`.
+- Backups:
+  - `вкр\ВКР 2026 Миронов Егор Максимович.backup_before_chapter6_formula_notation_20260619_044300.docx`;
+  - `вкр\ВКР 2026 Миронов Егор Максимович.backup_before_formula_renumber_after_ch6_20260619_044639.docx`.
+- Result:
+  - chapter 6.2+ formulas for object counts, observation interval, sampling frequency, data completeness, phase-label completeness, downtime cost, annual effect, payback period, and final quality/risk score were rebuilt as clean Word OMML equations;
+  - explanatory notation in chapter 6.2+ was normalized to real Word subscript formatting where applicable;
+  - formula numbering was compacted from the post-cleanup non-continuous set to a continuous sequence `(1)` ... `(86)`;
+  - affected formula references in text were updated, including chapter 6 references to RUL formulas `(69)`-`(70)` and metrics `(49)`-`(51)`.
+- Structural checks:
+  - DOCX ZIP integrity passed (`zip_bad=None`);
+  - formulas: `86`, continuous `(1)` ... `(86)`, no missing labels, no duplicates;
+  - detected formula-related text references all point to existing formula numbers;
+  - broken Word reference text was not found;
+  - `???` encoding artifacts were not found.
+- Visual render status:
+  - sandbox render failed on temporary-profile permissions;
+  - escalated render failed because `soffice` / LibreOffice is unavailable.
+
+## VKR Tables 12 Pt And Formula Explanations - 2026-06-19
+
+- Applied the follow-up formatting and formula-explanation pass directly to `вкр\ВКР 2026 Миронов Егор Максимович.docx`.
+- Saved note: [[docs/vkr_rpz/tables12_formula_explanations_2026-06-19]].
+- Scripts added/used:
+  - `scripts\apply_vkr_tables12_formula_explanations_20260619.py`;
+  - `scripts\fix_vkr_formula_explanation_placement_20260619.py`;
+  - `scripts\fix_vkr_key_id_explanation_encoding_20260619.py`.
+- Backups:
+  - `вкр\ВКР 2026 Миронов Егор Максимович.backup_before_tables12_formula_explanations_20260619_024731.docx`;
+  - `вкр\ВКР 2026 Миронов Егор Максимович.backup_before_formula_explanation_placement_20260619_024939.docx`;
+  - `вкр\ВКР 2026 Миронов Егор Максимович.backup_before_key_id_encoding_fix_20260619_025140.docx`.
+- Result:
+  - all text runs inside all tables were set to `Times New Roman`, `12 pt`;
+  - formula explanations were expanded/normalized for phase-energy formulas, reliability and downtime formulas, HI/RUL formulas, feature/normalization formulas, degradation formulas, metrics, InfluxDB identifiers, and economics formulas;
+  - a misplaced degradation explanation was moved to the correct formula group;
+  - temporary `???` encoding artifacts in key/value/id explanations were detected and fixed.
+- Structural checks:
+  - DOCX ZIP integrity passed (`zip_bad=None`);
+  - formulas: `92`, continuous `(1)` ... `(92)`, no missing numbers, no duplicates;
+  - tables: `64`, table runs checked: `2030`, non-12-pt table runs: `0`;
+  - broken Word reference text was not found;
+  - `???` encoding artifacts were not found.
+- Visual render status:
+  - sandbox render failed on temporary-profile permissions;
+  - escalated render failed because `soffice` / LibreOffice is unavailable.
 
 ## VKR Audit And Correction Decisions - 2026-05-29
 

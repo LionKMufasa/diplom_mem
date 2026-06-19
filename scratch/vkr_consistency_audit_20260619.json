@@ -1,0 +1,962 @@
+{
+  "docx": "вкр\\ВКР 2026 Миронов Егор Максимович.docx",
+  "zip_bad": null,
+  "paragraph_count_xml": 2301,
+  "paragraph_count_python_docx": 848,
+  "table_count_python_docx": 64,
+  "formula_labels": {
+    "count": 86,
+    "min": 1,
+    "max": 86,
+    "missing": [],
+    "duplicates": []
+  },
+  "formula_duplicate_bodies": [],
+  "main_table_captions": {
+    "count": 44,
+    "min": 1,
+    "max": 44,
+    "missing": [],
+    "duplicates": []
+  },
+  "main_figure_captions": {
+    "count": 19,
+    "min": 1,
+    "max": 19,
+    "missing": [],
+    "duplicates": []
+  },
+  "appendix_captions": {
+    "Таблица Б": {
+      "count": 3,
+      "min": 1,
+      "max": 3,
+      "missing": [],
+      "duplicates": []
+    },
+    "Таблица В": {
+      "count": 3,
+      "min": 1,
+      "max": 3,
+      "missing": [],
+      "duplicates": []
+    },
+    "Таблица Г": {
+      "count": 3,
+      "min": 1,
+      "max": 3,
+      "missing": [],
+      "duplicates": []
+    },
+    "Таблица Д": {
+      "count": 3,
+      "min": 1,
+      "max": 3,
+      "missing": [],
+      "duplicates": []
+    },
+    "Листинг Ж": {
+      "count": 4,
+      "min": 1,
+      "max": 4,
+      "missing": [],
+      "duplicates": []
+    }
+  },
+  "image_relationship_count": 38,
+  "image_relationship_targets": [
+    "media/image1.png",
+    "media/image9.png",
+    "media/image22.PNG",
+    "media/image4.png",
+    "media/image17.png",
+    "media/image25.PNG",
+    "media/image30.PNG",
+    "media/image33.PNG",
+    "media/image38.PNG",
+    "media/image12.png",
+    "media/image7.png",
+    "media/image15.png",
+    "media/image20.PNG",
+    "media/image23.PNG",
+    "media/image28.PNG",
+    "media/image36.PNG",
+    "media/image2.png",
+    "media/image5.png",
+    "media/image10.png",
+    "media/image13.png",
+    "media/image18.png",
+    "media/image26.PNG",
+    "media/image31.PNG",
+    "media/image34.PNG",
+    "media/image8.png",
+    "media/image16.png",
+    "media/image21.PNG",
+    "media/image29.PNG",
+    "media/image3.png",
+    "media/image24.PNG",
+    "media/image37.PNG",
+    "media/image6.png",
+    "media/image11.png",
+    "media/image19.png",
+    "media/image32.PNG",
+    "media/image14.png",
+    "media/image27.PNG",
+    "media/image35.PNG"
+  ],
+  "formula_refs": {
+    "count": 46,
+    "refs": [
+      {
+        "paragraph": 344,
+        "match": "(9)",
+        "text": "HI(t) = 1 - Σj=1p wj · fj(t),(9)"
+      },
+      {
+        "paragraph": 369,
+        "match": "(10)",
+        "text": "HI(t) ≤ HIкр или xj(t) ≥ xкр,j,(10)"
+      },
+      {
+        "paragraph": 371,
+        "match": "(11)",
+        "text": "RULN = Nкр - Nтек,(11)"
+      },
+      {
+        "paragraph": 412,
+        "match": "(13)",
+        "text": "S = {D, F, HI, RUL, AТО},(13)"
+      },
+      {
+        "paragraph": 462,
+        "match": "(14)",
+        "text": "RUL = g(F, θ),(14)"
+      },
+      {
+        "paragraph": 465,
+        "match": "(15)",
+        "text": "Kпред = Nсвоевр / Nпред,(15)"
+      },
+      {
+        "paragraph": 553,
+        "match": "(21)",
+        "text": "Tобн ≤ Δtдоп,(21)"
+      },
+      {
+        "paragraph": 616,
+        "match": "(23)",
+        "text": "Коэффициент готовности для целей ТЗ принимается по формуле (23), а доля своевременных предупреждений – по формуле (15)."
+      },
+      {
+        "paragraph": 616,
+        "match": "(15)",
+        "text": "Коэффициент готовности для целей ТЗ принимается по формуле (23), а доля своевременных предупреждений – по формуле (15)."
+      },
+      {
+        "paragraph": 659,
+        "match": "(16)",
+        "text": "Запись телеметрии должна соответствовать базовой структуре наблюдения, заданной формулой (16)."
+      },
+      {
+        "paragraph": 660,
+        "match": "(18)",
+        "text": "Для каждого окна наблюдения W признаковый вектор формируется по составу, заданному формулой (18)."
+      },
+      {
+        "paragraph": 661,
+        "match": "(5)",
+        "text": "Энергетическая составляющая признакового описания должна рассчитываться по произведению момента и угловой скорости; базовый вид такой оценки приведен в формуле (5)."
+      },
+      {
+        "paragraph": 664,
+        "match": "(9)",
+        "text": "Показатель HI должен рассчитываться по нормированным диагностическим признакам и весам, как задано формулой (9)."
+      },
+      {
+        "paragraph": 665,
+        "match": "(14)",
+        "text": "Прогноз RUL задается регрессионной зависимостью, введенной в формуле (14), и уточняется в техническом проектировании для выбранного состава признаков."
+      },
+      {
+        "paragraph": 671,
+        "match": "(21)",
+        "text": "Ограничение на период обновления диагностических данных применяется по формуле (21)."
+      },
+      {
+        "paragraph": 864,
+        "match": "(16)",
+        "text": "Структура проектной записи телеметрии строится на основе базового вектора наблюдения, заданного формулой (16)."
+      },
+      {
+        "paragraph": 892,
+        "match": "(41)",
+        "text": "HIi(N) = 1 - Σj=1p wj · fi,j(N),(41)"
+      },
+      {
+        "paragraph": 898,
+        "match": "(43)",
+        "text": "HIi(N) ≤ HIкр,(43)"
+      },
+      {
+        "paragraph": 904,
+        "match": "(45)",
+        "text": "RULi(N) = Nкр,i - N,(45)"
+      },
+      {
+        "paragraph": 905,
+        "match": "(46)",
+        "text": "RULi(t) = tкр,i - t,(46)"
+      },
+      {
+        "paragraph": 908,
+        "match": "(47)",
+        "text": "X = {FW, HI, c, s, i},(47)"
+      },
+      {
+        "paragraph": 909,
+        "match": "(48)",
+        "text": "y = RUL,(48)"
+      },
+      {
+        "paragraph": 939,
+        "match": "(49)",
+        "text": "MAE = (1/n) · Σi=1n |RULi - RULi|,(49)"
+      },
+      {
+        "paragraph": 940,
+        "match": "(50)",
+        "text": "RMSE = √[(1/n) · Σi=1n(RULi - RULi)^2],(50)"
+      },
+      {
+        "paragraph": 941,
+        "match": "(51)",
+        "text": "R² = 1 - Σ(RULj - RULj)^2 / Σ(RULj - mean(RUL))^2,(51)"
+      },
+      {
+        "paragraph": 943,
+        "match": "(15)",
+        "text": "Дополнительно для оценки диагностической полезности используется доля своевременных предупреждений по формуле (15)."
+      },
+      {
+        "paragraph": 1016,
+        "match": "(54)",
+        "text": "Warning = 1, если RUL < Tпл + Tрез или HI ≤ HIкр(54)"
+      },
+      {
+        "paragraph": 1047,
+        "match": "(55)",
+        "text": "Rраб = {Sсцена, Sцикл, Sтелем, Sпризнаки, SRUL, SБД, SUI},(55)"
+      },
+      {
+        "paragraph": 1150,
+        "match": "(63)",
+        "text": "HIi(N) = 1 - min(1; αi(N) / αi,кр)(63)"
+      },
+      {
+        "paragraph": 1175,
+        "match": "(64)",
+        "text": "Dlim = 1, если HIi(N) ≤ HIкр или xj(N) ≥ xкр,j,(64)"
+      },
+      {
+        "paragraph": 1228,
+        "match": "(40)",
+        "text": "Энергетический признак окна используется в том же смысле, что и в формуле (40), то есть через произведение момента и угловой скорости на интервале наблюдения. Наклон сигнала рассчитывается по ранее введенной формуле (19)."
+      },
+      {
+        "paragraph": 1228,
+        "match": "(19)",
+        "text": "Энергетический признак окна используется в том же смысле, что и в формуле (40), то есть через произведение момента и угловой скорости на интервале наблюдения. Наклон сигнала рассчитывается по ранее введенной формуле (19)."
+      },
+      {
+        "paragraph": 1250,
+        "match": "(36)",
+        "text": "Нормирование признаков выполняется по формуле (36); при отсутствии нулевого диапазона она совпадает с базовой зависимостью (17)."
+      },
+      {
+        "paragraph": 1250,
+        "match": "(17)",
+        "text": "Нормирование признаков выполняется по формуле (36); при отсутствии нулевого диапазона она совпадает с базовой зависимостью (17)."
+      },
+      {
+        "paragraph": 1259,
+        "match": "(69)",
+        "text": "RULN(N) = Nкр - N,(69)"
+      },
+      {
+        "paragraph": 1261,
+        "match": "(70)",
+        "text": "Nкр = mini {N | HIi(N) ≤ HIкр},(70)"
+      },
+      {
+        "paragraph": 1263,
+        "match": "(14)",
+        "text": "Регрессионная модель использует зависимость RUL = g(FW, HI, θ), введенную в формуле (14)."
+      },
+      {
+        "paragraph": 1321,
+        "match": "(72)",
+        "text": "value = {qi, ωi, ai, Mi, HIi, RUL, carrying},(72)"
+      },
+      {
+        "paragraph": 1440,
+        "match": "(74)",
+        "text": "AТО = 1, если RUL < Tпл + Tрез или HIi ≤ HIкр,(74)"
+      },
+      {
+        "paragraph": 1626,
+        "match": "(69)–(70)",
+        "text": "В данном подразделе повторно не приводятся формулы RUL и метрик качества: целевая переменная RUL рассчитывается по формулам (69)–(70), регрессионная зависимость используется по формуле (14), а MAE, RMSE и R² – по формулам (49)–(51). Далее п"
+      },
+      {
+        "paragraph": 1626,
+        "match": "(14)",
+        "text": "В данном подразделе повторно не приводятся формулы RUL и метрик качества: целевая переменная RUL рассчитывается по формулам (69)–(70), регрессионная зависимость используется по формуле (14), а MAE, RMSE и R² – по формулам (49)–(51). Далее п"
+      },
+      {
+        "paragraph": 1626,
+        "match": "(49)–(51)",
+        "text": "В данном подразделе повторно не приводятся формулы RUL и метрик качества: целевая переменная RUL рассчитывается по формулам (69)–(70), регрессионная зависимость используется по формуле (14), а MAE, RMSE и R² – по формулам (49)–(51). Далее п"
+      },
+      {
+        "paragraph": 1717,
+        "match": "(81)",
+        "text": "Kдан = NкоррNобщ,(81)"
+      },
+      {
+        "paragraph": 1718,
+        "match": "(82)",
+        "text": "Kфаз = Nзап,фазNобщ,(82)"
+      },
+      {
+        "paragraph": 1784,
+        "match": "(85)",
+        "text": "Срок окупаемости вычислен по формуле (85)"
+      },
+      {
+        "paragraph": 1818,
+        "match": "(86)",
+        "text": "Qv = Σj=1m wj · rv,j,(86)"
+      }
+    ],
+    "invalid": []
+  },
+  "table_refs": {
+    "count": 47,
+    "refs": [
+      {
+        "paragraph": 234,
+        "match": "Таблица 1",
+        "text": "Таблица 1 – Основные подсистемы линии и диагностическое значение"
+      },
+      {
+        "paragraph": 268,
+        "match": "таблицу 2",
+        "text": "Принятые для дальнейших расчетов параметры паллетизационного цикла сведены в таблицу 2."
+      },
+      {
+        "paragraph": 269,
+        "match": "Таблица 2",
+        "text": "Таблица 2 – Принятые параметры паллетизационного цикла"
+      },
+      {
+        "paragraph": 319,
+        "match": "таблице 3",
+        "text": "Контролируемые узлы робота и диагностические признаки, по которым может оцениваться развитие деградации, представлены в таблице 3."
+      },
+      {
+        "paragraph": 320,
+        "match": "Таблица 3",
+        "text": "Таблица 3 – Контролируемые узлы и признаки деградации"
+      },
+      {
+        "paragraph": 346,
+        "match": "Таблица 4",
+        "text": "Таблица 4 – Отказы, последствия и признаки"
+      },
+      {
+        "paragraph": 378,
+        "match": "Таблица 5",
+        "text": "Таблица 5 – Сравнение стратегий обслуживания"
+      },
+      {
+        "paragraph": 418,
+        "match": "Таблица 6",
+        "text": "Таблица 6 – Обоснование выбора программных средств"
+      },
+      {
+        "paragraph": 470,
+        "match": "Таблица 7",
+        "text": "Таблица 7 – Логические уровни архитектуры ПАК"
+      },
+      {
+        "paragraph": 526,
+        "match": "Таблица 8",
+        "text": "Таблица 8 – Сравнение архитектурных вариантов"
+      },
+      {
+        "paragraph": 559,
+        "match": "Таблица 9",
+        "text": "Таблица 9 – Укрупненные требования к ПАК"
+      },
+      {
+        "paragraph": 591,
+        "match": "Таблица 10",
+        "text": "Таблица 10 – Общие сведения о системе"
+      },
+      {
+        "paragraph": 619,
+        "match": "Таблица 11",
+        "text": "Таблица 11 – Цели создания системы и критерии достижения"
+      },
+      {
+        "paragraph": 675,
+        "match": "Таблица 12",
+        "text": "Таблица 12 – Требования к видам обеспечения"
+      },
+      {
+        "paragraph": 693,
+        "match": "таблице 13",
+        "text": "Состав работ по созданию прототипа ПАК PdM РП и ожидаемые результаты по каждому этапу приведены в таблице 13."
+      },
+      {
+        "paragraph": 695,
+        "match": "Таблица 13",
+        "text": "Таблица 13 – Состав работ по созданию ПАК PdM РП"
+      },
+      {
+        "paragraph": 726,
+        "match": "Таблица 14",
+        "text": "Таблица 14 – Критерии контроля и приемки"
+      },
+      {
+        "paragraph": 778,
+        "match": "Таблица 15",
+        "text": "Таблица 15 – Логическая структура ПАК PdM РП"
+      },
+      {
+        "paragraph": 811,
+        "match": "Таблица 16",
+        "text": "Таблица 16 – Основные объекты цифровой модели"
+      },
+      {
+        "paragraph": 915,
+        "match": "Таблица 17",
+        "text": "Таблица 17 – Сравнение моделей прогнозирования RUL"
+      },
+      {
+        "paragraph": 945,
+        "match": "Таблица 18",
+        "text": "Таблица 18 – Сравнение метрик качества прогнозирования RUL"
+      },
+      {
+        "paragraph": 971,
+        "match": "Таблица 19",
+        "text": "Таблица 19 – Проект структуры хранения данных"
+      },
+      {
+        "paragraph": 995,
+        "match": "Таблица 20",
+        "text": "Таблица 20 – Состав панели мониторинга"
+      },
+      {
+        "paragraph": 1052,
+        "match": "Таблица 21",
+        "text": "Таблица 21 – Состав артефактов рабочего проекта ПАК предиктивного обслуживания"
+      },
+      {
+        "paragraph": 1086,
+        "match": "Таблица 22",
+        "text": "Таблица 22 – Объекты сцены CoppeliaSim и их назначение в цифровой модели"
+      },
+      {
+        "paragraph": 1117,
+        "match": "Таблица 23",
+        "text": "Таблица 23 – Фазы паллетизационного цикла и их диагностическое значение"
+      },
+      {
+        "paragraph": 1152,
+        "match": "Таблица 24",
+        "text": "Таблица 24 – Сценарии моделирования деградации узлов робота"
+      },
+      {
+        "paragraph": 1184,
+        "match": "Таблица 25",
+        "text": "Таблица 25 – Состав записи телеметрии привода"
+      },
+      {
+        "paragraph": 1229,
+        "match": "Таблица 26",
+        "text": "Таблица 26 – Диагностические признаки, рассчитываемые по телеметрии"
+      },
+      {
+        "paragraph": 1265,
+        "match": "Таблица 27",
+        "text": "Таблица 27 – Этапы подготовки и проверки модели прогнозирования RUL"
+      },
+      {
+        "paragraph": 1288,
+        "match": "Таблица 28",
+        "text": "Таблица 28 – Последовательность подготовки модели прогнозирования RUL"
+      },
+      {
+        "paragraph": 1323,
+        "match": "Таблица 29",
+        "text": "Таблица 29 – Проект логической структуры хранения временных рядов"
+      },
+      {
+        "paragraph": 1348,
+        "match": "Таблица 30",
+        "text": "Таблица 30 – Структура измерений и расчетных таблиц прототипа"
+      },
+      {
+        "paragraph": 1378,
+        "match": "Таблица 31",
+        "text": "Таблица 31 – Фрагмент нормализованной телеметрии одного момента времени"
+      },
+      {
+        "paragraph": 1419,
+        "match": "Таблица 32",
+        "text": "Таблица 32 – Состав виджетов операторской панели мониторинга"
+      },
+      {
+        "paragraph": 1447,
+        "match": "Таблица 33",
+        "text": "Таблица 33 – Проверки интеграции компонентов ПАК"
+      },
+      {
+        "paragraph": 1476,
+        "match": "Таблица 34",
+        "text": "Таблица 34 – Результаты интеграционного теста компонентов"
+      },
+      {
+        "paragraph": 1518,
+        "match": "Таблица 35",
+        "text": "Таблица 35 – Критерии апробации и подтверждающие артефакты"
+      },
+      {
+        "paragraph": 1536,
+        "match": "Таблица 36",
+        "text": "Таблица 36 – Методика апробации прототипа ПАК"
+      },
+      {
+        "paragraph": 1567,
+        "match": "Таблица 37",
+        "text": "Таблица 37 – Фактические наборы данных, использованные в апробации"
+      },
+      {
+        "paragraph": 1593,
+        "match": "Таблица 38",
+        "text": "Таблица 38 – Расчет технологических показателей цикла паллетирования"
+      },
+      {
+        "paragraph": 1629,
+        "match": "Таблица 39",
+        "text": "Таблица 39 – Фактические метрики прогноза RUL на тестовой выборке"
+      },
+      {
+        "paragraph": 1672,
+        "match": "Таблица 40",
+        "text": "Таблица 40 – Пример итоговых показателей мониторинга для motor2"
+      },
+      {
+        "paragraph": 1723,
+        "match": "Таблица 41",
+        "text": "Таблица 41 – Фактические показатели работоспособности контура мониторинга"
+      },
+      {
+        "paragraph": 1757,
+        "match": "Таблица 42",
+        "text": "Таблица 42 – Расчетный сценарий экономического эффекта"
+      },
+      {
+        "paragraph": 1788,
+        "match": "Таблица 43",
+        "text": "Таблица 43 – Исходные оценки для интегрального сравнения вариантов обслуживания"
+      },
+      {
+        "paragraph": 1821,
+        "match": "Таблица 44",
+        "text": "Таблица 44 – Сравнение вариантов обслуживания роботизированной ячейки"
+      }
+    ],
+    "invalid": []
+  },
+  "figure_refs": {
+    "count": 10,
+    "refs": [
+      {
+        "paragraph": 254,
+        "match": "рисунке 1",
+        "text": "Функциональная схема производственного процесса, отражающая последовательность операций и состояние технологического потока, приведена на рисунке 1."
+      },
+      {
+        "paragraph": 257,
+        "match": "рисунках 2",
+        "text": "Общая схема расположения оборудования линии розлива, используемая как исходная технологическая основа для анализа участка паллетизации, показана на рисунках 2 и 3."
+      },
+      {
+        "paragraph": 294,
+        "match": "рисунке 4",
+        "text": "Блок-схема цикла паллетизации, отражающая последовательность операций и состояние технологического потока, приведена на рисунке 4."
+      },
+      {
+        "paragraph": 303,
+        "match": "рисунке 3",
+        "text": "Пример графиков телеметрии, полученных в среде CoppeliaSim для контролируемых приводов робота, представлен на рисунке 3."
+      },
+      {
+        "paragraph": 310,
+        "match": "рисунке 6",
+        "text": "Внешний вид рассматриваемого промышленного робота ABB IRB 660–180/3.15 приведен на рисунке 6."
+      },
+      {
+        "paragraph": 512,
+        "match": "рисунках 5",
+        "text": "Декомпозиция нулевого и первого уровней системы предиктивного обслуживания, раскрывающие функции сбора данных, предобработки, прогнозирования и мониторинга показана на рисунках 5 и 6."
+      },
+      {
+        "paragraph": 804,
+        "match": "рисунке 9",
+        "text": "Единый поток обработки данных показан на рисунке 9."
+      },
+      {
+        "paragraph": 1020,
+        "match": "рисунке 12",
+        "text": "Макет панели мониторинга Grafana для контроля состояния и прогноза RUL показан на рисунке 12."
+      },
+      {
+        "paragraph": 1256,
+        "match": "рисунке 16",
+        "text": "На рисунке 16 показана последовательность обработки данных при прогнозировании RUL. Алгоритм включает получение телеметрии, предобработку и проверку данных, формирование диагностических признаков, расчет HI, прогнозирование остаточного ресу"
+      },
+      {
+        "paragraph": 1314,
+        "match": "рисунке 17",
+        "text": "Контрольный пример сопоставления фактического и прогнозного RUL на этапе обучения модели представлен на рисунке 17."
+      }
+    ],
+    "invalid": []
+  },
+  "source_audit": {
+    "sources": {
+      "count": 0,
+      "min": null,
+      "max": null,
+      "missing": [],
+      "duplicates": []
+    },
+    "cited_count": 44,
+    "cited_minmax": [
+      1,
+      44
+    ],
+    "invalid_citations": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44
+    ],
+    "uncited_sources": []
+  },
+  "style_audit": {
+    "heading_large_count": 0,
+    "heading_not_14_count": 0,
+    "heading_large_examples": [],
+    "heading_not_14_examples": [],
+    "table_runs": 1834,
+    "table_non12_count": 0,
+    "table_non12_examples": []
+  },
+  "broken_word_refs": {
+    "source_not_found": false,
+    "question_marks": false,
+    "todo": true
+  },
+  "scene_name_checks": {
+    "vkr_scena.ttt": true,
+    "final_scena": false,
+    "pred_final": false
+  },
+  "data_audit": {
+    "raw_jsonl": {
+      "count": 22174,
+      "t_min": 162.40000000000268,
+      "t_max": 2221.449999999316,
+      "span": 2059.049999999313
+    },
+    "normalized_csv": {
+      "rows": 88696
+    },
+    "features_csv": {
+      "rows": 600
+    },
+    "degradation_csv": {
+      "rows": 192000
+    },
+    "nn_metrics_rows": [
+      {
+        "split": "test",
+        "scenario": "S0",
+        "axis": "motor1",
+        "count": "2400",
+        "MAE": "0.794537427",
+        "RMSE": "0.859570925",
+        "R2": "1"
+      },
+      {
+        "split": "test",
+        "scenario": "S0",
+        "axis": "motor2",
+        "count": "2400",
+        "MAE": "0.814065007",
+        "RMSE": "0.818413761",
+        "R2": "1"
+      },
+      {
+        "split": "test",
+        "scenario": "S0",
+        "axis": "motor3",
+        "count": "2400",
+        "MAE": "0.828711049",
+        "RMSE": "0.838625935",
+        "R2": "1"
+      },
+      {
+        "split": "test",
+        "scenario": "S0",
+        "axis": "motor4",
+        "count": "2400",
+        "MAE": "0.818081735",
+        "RMSE": "0.882778626",
+        "R2": "1"
+      },
+      {
+        "split": "test",
+        "scenario": "S1",
+        "axis": "motor1",
+        "count": "2400",
+        "MAE": "2.73101125",
+        "RMSE": "4.31181931",
+        "R2": "0.960098112"
+      },
+      {
+        "split": "test",
+        "scenario": "S1",
+        "axis": "motor2",
+        "count": "2400",
+        "MAE": "2.52904552",
+        "RMSE": "4.22356672",
+        "R2": "0.961714788"
+      },
+      {
+        "split": "test",
+        "scenario": "S1",
+        "axis": "motor3",
+        "count": "2400",
+        "MAE": "2.98021142",
+        "RMSE": "4.70856534",
+        "R2": "0.95241725"
+      },
+      {
+        "split": "test",
+        "scenario": "S1",
+        "axis": "motor4",
+        "count": "2400",
+        "MAE": "1.9340219",
+        "RMSE": "2.97919639",
+        "R2": "0.980951069"
+      },
+      {
+        "split": "test",
+        "scenario": "S2",
+        "axis": "motor1",
+        "count": "2400",
+        "MAE": "1.1212261",
+        "RMSE": "1.39097863",
+        "R2": "0.995827281"
+      },
+      {
+        "split": "test",
+        "scenario": "S2",
+        "axis": "motor2",
+        "count": "2400",
+        "MAE": "1.43237545",
+        "RMSE": "2.57414963",
+        "R2": "0.985709552"
+      }
+    ],
+    "summaries": {
+      "file_pipeline_run_summary.json": {
+        "status": "ok",
+        "inputs": [
+          "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\telemetry\\vkr_raw\\long_live_01.jsonl"
+        ],
+        "normalized": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\telemetry\\vkr_normalized\\vkr_telemetry_normalized.csv",
+        "validated": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\telemetry\\vkr_validated\\vkr_telemetry_validated.csv",
+        "features": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\features\\vkr_features.csv",
+        "degradation_features": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\experiments\\vkr_degradation_features.csv",
+        "rul_estimates": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\results\\vkr_rul_estimates.csv",
+        "rul_metrics": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\results\\vkr_rul_metrics.csv",
+        "nn_rul_predictions": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\results\\vkr_nn_rul_predictions.csv",
+        "nn_rul_metrics": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\results\\vkr_nn_rul_metrics.csv",
+        "nn_rul_model": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\results\\vkr_nn_rul_model.json",
+        "figures": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\reports\\figures\\vkr_practice"
+      },
+      "telemetry_validation_summary.json": {
+        "total_rows": 88696,
+        "valid_rows": 88696,
+        "invalid_rows": 0,
+        "K_data": 1.0,
+        "K_phase": 1.0,
+        "axis_count": 4,
+        "run_count": 1,
+        "cycle_count": 12,
+        "segment_count": 1121,
+        "phase_count": 14,
+        "dt_avg_s": 0.09286294141522321,
+        "sampling_hz": 10.768558315729464,
+        "errors_sample": []
+      },
+      "feature_summary.json": {
+        "input_rows": 88696,
+        "feature_rows": 600,
+        "cycle_count": 12,
+        "segment_count": 1121,
+        "axes": [
+          "motor1",
+          "motor2",
+          "motor3",
+          "motor4"
+        ],
+        "phases": [
+          "cycle_complete",
+          "grip_contact",
+          "lift_before_pick",
+          "lift_with_load",
+          "move_to_pallet",
+          "pallet_arrived",
+          "pallet_outfeed",
+          "pallet_removed",
+          "pick",
+          "place",
+          "return_home",
+          "return_home_between_layers",
+          "unknown",
+          "water_bundle_generated"
+        ],
+        "output": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\features\\vkr_features.csv"
+      },
+      "degradation_summary.json": {
+        "base_feature_rows": 600,
+        "scenario_rows": 192000,
+        "cycles_per_scenario": 80,
+        "scenarios": {
+          "S0": 0.0,
+          "S1": 0.08,
+          "S2": 0.2,
+          "S3": 0.35
+        },
+        "output": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\experiments\\vkr_degradation_features.csv"
+      },
+      "nn_rul_summary.json": {
+        "status": "ok",
+        "library": "scikit-learn",
+        "model_type": "MLPRegressor",
+        "training_rows": 153600,
+        "test_rows": 38400,
+        "prediction_rows": 192000,
+        "metric_rows": 32,
+        "hidden_size": 16,
+        "epochs": 2000,
+        "learning_rate": 0.02,
+        "n_iter": 72,
+        "loss": 0.00046619966286919696,
+        "test_MAE_avg": 1.4414180492499997,
+        "test_RMSE_avg": 2.1438777704375,
+        "test_R2_avg": 0.9876688859374999,
+        "predictions": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\results\\vkr_nn_rul_predictions.csv",
+        "metrics": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\results\\vkr_nn_rul_metrics.csv",
+        "model": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\results\\vkr_nn_rul_model.json"
+      },
+      "rul_summary.json": {
+        "estimate_rows": 192000,
+        "metric_rows": 16,
+        "fail_alpha": 0.45,
+        "hi_crit": 0.35,
+        "output": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\results\\vkr_rul_estimates.csv",
+        "metrics": "C:\\Users\\egork\\Desktop\\coppelia_dpilom\\data\\results\\vkr_rul_metrics.csv"
+      }
+    },
+    "expected_token_presence": {
+      "22174": true,
+      "88696": true,
+      "600": true,
+      "192000": true,
+      "153600": true,
+      "38400": true,
+      "1,441": true,
+      "2,144": true,
+      "0,988": true,
+      "2059,05": true,
+      "0,0929": true,
+      "10,77": true,
+      "187": true,
+      "231": true,
+      "14,55": true,
+      "58212": true,
+      "450000": true
+    },
+    "stale_token_presence": {
+      "17920": false,
+      "14336": false,
+      "3584": false,
+      "1,173": false,
+      "1,442": false,
+      "0,994": false,
+      "23,6 / 472": false,
+      "20 Гц": false,
+      "final_scena": false,
+      "pred_final": false
+    }
+  }
+}

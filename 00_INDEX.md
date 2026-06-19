@@ -31,17 +31,23 @@ Read in this order after context compaction or in a new session:
 21. [[docs/vkr_rpz/appendices_2026-05-28]] - appendix structure added to the VKR RPZ and main-text references to appendices.
 22. [[docs/vkr_rpz/audit_findings_2026-05-29]] - latest audit findings, user decisions, and correction priorities.
 23. [[docs/vkr_rpz/software_architecture_revision_2026-06-02]] - accepted plan for chapter 2 software-choice/architecture restructuring and chapter 5 digital-model preparation addition.
-24. [[docs/vkr_practice/pak_pipeline_plan]] - working PAK pipeline, acceptance criteria, and RPZ output package.
-25. [[docs/vkr_practice/coppeliasim_motion_manual_analysis]] - local CoppeliaSim manual/example analysis for the closed-chain robot motion blocker.
-26. [[docs/vkr_practice/data_pipeline_state]] - implemented file data pipeline and latest smoke-test outputs.
-27. [[docs/vkr_practice/pak_runtime_runbook]] - how to run the PAK demo, including another-computer setup.
-28. [[docs/vkr_rpz/literature_citation_notes]] - literature/PDF citation map for VKR RPZ.
-29. [[docs/vkr_rpz/chapter2_conceptual_draft]] - earlier expanded Markdown draft used to fill VKR RPZ chapter 2.
-30. [[docs/nirs8_rpz/nirs8_work_plan]] - NIRS-8 RPZ focus, source document, and next steps.
-31. [[docs/nirs8_rpz/current_docx_state]] - current NIRS-8 DOCX structure and fill status.
-32. [[docs/nirs8_rpz/nirs8_full_draft_source]] - generated source mirror for the filled NIRS-8 DOCX.
-33. [[docs/nirs8_rpz/nirs8_report_outline]] - planned NIRS-8 report structure.
-34. [[docs/nirs8_rpz/nirs8_literature_selection]] - selected literature for NIRS-8 with download status.
+24. [[docs/vkr_rpz/final_pdf_review_2026-06-19]] - pred-final VKR PDF review, especially repeated-formula cleanup map.
+25. [[docs/vkr_rpz/formula_logic_cleanup_2026-06-19]] - applied DOCX formula cleanup, new numbering and verification notes.
+26. [[docs/vkr_rpz/tables12_formula_explanations_2026-06-19]] - applied 12 pt table formatting and formula-explanation cleanup.
+27. [[docs/vkr_rpz/formula_explanation_subscripts_2026-06-19]] - converted formula-explanation underscore variables to real Word subscripts.
+28. [[docs/vkr_rpz/chapter6_formula_notation_renumber_2026-06-19]] - corrected formulas and notation in chapter 6.2 and later, then renumbered formulas to `(1)` ... `(86)`.
+29. [[docs/vkr_rpz/final_consistency_audit_2026-06-19]] - structural final DOCX audit and remaining correction items for figures, appendix formula links, and visual formula QA.
+30. [[docs/vkr_practice/pak_pipeline_plan]] - working PAK pipeline, acceptance criteria, and RPZ output package.
+31. [[docs/vkr_practice/coppeliasim_motion_manual_analysis]] - local CoppeliaSim manual/example analysis for the closed-chain robot motion blocker.
+32. [[docs/vkr_practice/data_pipeline_state]] - implemented file data pipeline and latest smoke-test outputs.
+33. [[docs/vkr_practice/pak_runtime_runbook]] - how to run the PAK demo, including another-computer setup.
+34. [[docs/vkr_rpz/literature_citation_notes]] - literature/PDF citation map for VKR RPZ.
+35. [[docs/vkr_rpz/chapter2_conceptual_draft]] - earlier expanded Markdown draft used to fill VKR RPZ chapter 2.
+36. [[docs/nirs8_rpz/nirs8_work_plan]] - NIRS-8 RPZ focus, source document, and next steps.
+37. [[docs/nirs8_rpz/current_docx_state]] - current NIRS-8 DOCX structure and fill status.
+38. [[docs/nirs8_rpz/nirs8_full_draft_source]] - generated source mirror for the filled NIRS-8 DOCX.
+39. [[docs/nirs8_rpz/nirs8_report_outline]] - planned NIRS-8 report structure.
+40. [[docs/nirs8_rpz/nirs8_literature_selection]] - selected literature for NIRS-8 with download status.
 
 Main entities:
 
@@ -63,6 +69,12 @@ Main entities:
 - VKR RPZ appendices pass: [[docs/vkr_rpz/appendices_2026-05-28]]
 - VKR RPZ latest audit findings: [[docs/vkr_rpz/audit_findings_2026-05-29]]
 - VKR RPZ software/architecture revision plan: [[docs/vkr_rpz/software_architecture_revision_2026-06-02]]
+- VKR RPZ pred-final PDF review: [[docs/vkr_rpz/final_pdf_review_2026-06-19]]
+- VKR RPZ formula cleanup: [[docs/vkr_rpz/formula_logic_cleanup_2026-06-19]]
+- VKR RPZ table/formula-explanation cleanup: [[docs/vkr_rpz/tables12_formula_explanations_2026-06-19]]
+- VKR RPZ formula-explanation subscript cleanup: [[docs/vkr_rpz/formula_explanation_subscripts_2026-06-19]]
+- VKR RPZ chapter 6 formula notation and renumbering: [[docs/vkr_rpz/chapter6_formula_notation_renumber_2026-06-19]]
+- VKR RPZ final consistency audit: [[docs/vkr_rpz/final_consistency_audit_2026-06-19]]
 - VKR practical PAK pipeline: [[docs/vkr_practice/pak_pipeline_plan]]
 - CoppeliaSim motion manual/example analysis: [[docs/vkr_practice/coppeliasim_motion_manual_analysis]]
 - VKR file data pipeline state: [[docs/vkr_practice/data_pipeline_state]]

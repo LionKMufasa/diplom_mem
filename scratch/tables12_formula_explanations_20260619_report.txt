@@ -1,0 +1,6 @@
+DOCX: C:\Users\egork\Desktop\coppelia_dpilom\вкр\ВКР 2026 Миронов Егор Максимович.docx
+Backup: C:\Users\egork\Desktop\coppelia_dpilom\вкр\ВКР 2026 Миронов Егор Максимович.backup_before_tables12_formula_explanations_20260619_024731.docx
+Tables formatted: 64
+Table runs formatted to 12 pt: 2030
+Formula explanation replacements: 20
+Additional explanation paragraphs inserted: 9

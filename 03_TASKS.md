@@ -1,6 +1,6 @@
 # Tasks
 
-Last updated: 2026-06-02
+Last updated: 2026-06-19
 
 ## Current Focus: VKR RPZ
 
@@ -40,6 +40,17 @@ Last updated: 2026-06-02
     - [done] Added chapter 5.2 text about STEP -> SolidWorks -> URDF -> CoppeliaSim preparation and tuning of the digital model.
     - [done] Left an explicit placeholder for one future SolidWorks screenshot.
     - [done] Rechecked numbering after the 2026-06-02 pass: main tables `1-44`, formulas `(1)`-`(113)`, no table/formula gaps or duplicates.
+    - [done] Reviewed the pred-final PDF from `Итоговые_файлы_Миронов_2026-06-18_1644`; see [[docs/vkr_rpz/final_pdf_review_2026-06-19]].
+    - [done] Confirmed in the pred-final PDF: main tables `1-44` continuous, figures `1-19` continuous, source references `1-44` present, no old scene names, no broken-reference text.
+    - [done] Cleaned repeated formula definitions: kept base formulas once and replaced later duplicates with references.
+    - [done] Renumbered formula labels after cleanup; current sequence is `(1)` ... `(92)`.
+    - [done] Added missing explanations for key formula variables and checked formula references structurally.
+    - [done] Set all table text runs to `Times New Roman`, `12 pt`.
+    - [done] Expanded and normalized formula explanations/components across the document after the formula cleanup.
+    - [done] Fixed misplaced degradation explanation and corrected key/value/id explanation encoding artifacts.
+    - [done] Converted formula-explanation variables from underscore notation to real Word subscripts, including `F_i,s`, `d_k`, `x_min`, `RUL_i`, `D_lim`, and `I_RUL`.
+    - [done] Corrected formulas and notation in chapter `6.2` and later, then compacted formula numbering to a continuous sequence `(1)` ... `(86)` and updated affected formula references.
+    - [pending] Consider renaming chapter `4.2. Создание цифровой модели РТК` to design wording if practical implementation of the STEP -> SolidWorks -> URDF -> CoppeliaSim route must remain only in chapter 5.
     - [blocked] Visual render QA remains blocked because LibreOffice/`soffice` is not installed; automated Word COM update timed out.
   - Done: normalized heading structure and Word TOC.
   - Done: added `Перечень принятых сокращений`.
@@ -281,12 +292,21 @@ Last updated: 2026-06-02
 
 ### For VKR RPZ
 
-1. Open `вкр\ВКР 2026 Миронов Егор Максимович.docx` in Word and visually check chapters 1-6, TOC, bibliography numbering, formulas, captions, figures, and page breaks.
-2. Update Word fields/TOC manually because automated Word COM update hung in the current environment.
-3. Re-run the ВКР checker after the 2026-05-28 correction pass:
+1. Fix stale figure references found in the 2026-06-19 final audit:
+   - telemetry graphs paragraph: `рисунке 3` -> `рисунке 5`;
+   - IDEF0 decomposition paragraph: `рисунках 5 и 6` -> `рисунках 7 и 8`.
+2. Fix old formula references in appendix `Таблица Г.2`:
+   - remove/update `Формулы (80)-(84)`;
+   - remove/update `Формулы (74)-(76)`;
+   - remove/update `Формулы (85)-(87)`;
+   - remove/update `Формула (106)`.
+3. Open `вкр\ВКР 2026 Миронов Егор Максимович.docx` in Word and visually check chapters 1-6, TOC, bibliography numbering, formulas, captions, figures, and page breaks.
+4. In Word/PDF, verify that formulas `(49)-(51)` visibly distinguish actual `RUL` from predicted `hat(RUL)`, and that formula `(70)` renders as `min` with subscript `i`, not as `mini`.
+5. Update Word fields/TOC manually because automated Word COM update hung in the current environment.
+6. Re-run the ВКР checker after the 2026-05-28 correction pass:
    - listed small headings were removed from the heading structure;
    - requested missing source references `1`, `3`, `5`, `6`, `12`, `14-19`, `21-39`, `42-44` were added.
-4. Check the final main-text page count against the `70` page target and move any oversized detailed material to appendices only if needed.
+7. Check the final main-text page count against the `70` page target and move any oversized detailed material to appendices only if needed.
 
 ### For CoppeliaSim Practice
 
